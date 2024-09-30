@@ -1,9 +1,46 @@
 body {
-    background-color: #8FDFFF;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #dddddd;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    color: #333;
 }
 
+h1 {
+    font-size: 28px;
+    color: #0056b3;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Navbar Styling */
 .navbar-container {
     display: flex;
     justify-content: center;
@@ -52,7 +89,7 @@ nav {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #157F00;
+    background-color: #70D6FF;
     transition: width 0.3s ease;
 }
 
@@ -60,7 +97,7 @@ nav {
     width: 100%;
 }
 
-
+/* Footer Styling */
 footer {
     background-color: #ffffff;
     text-align: center;

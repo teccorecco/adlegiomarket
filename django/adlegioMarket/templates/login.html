@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block content %}
+<section class="py-4 py-md-5 my-5">
+    <div class="container py-md-5">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img class="img-fluid w-100 mt-3" data-aos="slide-right" data-aos-delay="100" id="loginPic" src="{% static 'img/illustrations/undraw_secure_login_pdn4.svg' %}">
+            </div>
+            <div class="col-md-5 col-xl-4 text-center text-md-start">
+                <h2 class="display-6 fw-bold mb-5">
+                    <span data-aos="fade-up" class="underline pb-1">
+                        <strong>{% trans "Login" %}</strong>
+                    </span>
+                </h2>
+                <div class="mb-3">
+                    <input class="shadow form-control" type="email" id="login-email" placeholder="{% trans 'Email' %}">
+                </div>
+                <div class="mb-3">
+                    <input class="shadow form-control" type="password" id="login-password" placeholder="{% trans 'Password' %}">
+                </div>
+                <div class="mb-5">
+                    <button class="btn btn-primary shadow" id="login-button" style="color: white;border-radius: 8px;">{% trans "Log in" %}</button>
+                </div>
+                <p class="text-muted">
+                    <a data-aos="fade" data-aos-delay="400" href="{% url 'forgotten_password' %}">{% trans "Passwort vergessen?" %}</a>
+                </p>
+                <p class="text-muted">
+                    <a data-aos="fade" data-aos-delay="400" href="{% url 'signup' %}">{% trans "Noch kein Konto? Hier registrieren" %}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('login-button').addEventListener('click', function() {
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    fetch('{% url "login" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}',
+        },
+        body: JSON.stringify({ email, password })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Login failed');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert(data.message); // Show success message
+        window.location.href = "/"; // Redirect after successful login
+    })
+    .catch(error => {
+        alert(error.message); // Show error message
+    });
+});
+</script>
+{% endblock content %}

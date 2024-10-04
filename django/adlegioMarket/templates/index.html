@@ -1,0 +1,372 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block content %}
+
+    <header class="pt-5">
+        <div class="container pt-4 pt-xl-5">
+            <div class="row pt-5">
+                <div class="col-md-8 text-center text-md-start mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 fw-bold mb-4" data-aos="fade" id="uberschrift">{% trans "Dein smarter Einkaufshelfer" %}.</h1>
+                        <p class="text-muted mb-3" data-aos="fade" data-aos-delay="150" id="unterUeberschrift" style="height: 34px;">{% trans "organisiert - einfach - überall" %}</p>
+                        <form class="d-flex justify-content-center flex-wrap" method="post" data-bs-theme="light">
+                            <div class="shadow-lg mb-3"></div>
+                            <div class="shadow-lg mb-3"><a class="btn btn-primary shadow" role="button" data-aos="fade" data-aos-delay="250" href="{% url 'signup' %}" style="color: white;border-radius: 8px;">{% trans "Jetzt registrieren" %}</a></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-10 mx-auto">
+                    <div class="text-center position-relative"><img class="img-fluid" data-aos="slide-up" data-aos-delay="300" src="{% static 'img/illustrations/undraw_empty_cart_co35.svg' %}" style="width: 600px;height: auto;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col">
+                    <div class="card border-light border-1 d-flex justify-content-center p-4">
+                        <div class="card-body">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon" data-aos="slide-up">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-checklist" style="color: white;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"></path>
+                                    <path d="M14 19l2 2l4 -4"></path>
+                                    <path d="M9 8h4"></path>
+                                    <path d="M9 12h2"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold" data-aos="fade" data-aos-delay="150">{% trans "Smarte Einkaufsplanung" %}</h4>
+                                <p class="text-muted" data-aos="fade" data-aos-delay="300">{% trans "Plane deinen Einkauf effizienter mit personalisierten Vorschlägen und automatischen Kategorisierungen. Nie wieder den Überblick verlieren!" %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-light border-1 d-flex justify-content-center p-4">
+                        <div class="card-body">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon" data-aos="slide-up">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-shopping-cart-share" style="color: white;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                    <path d="M12.5 17h-6.5v-14h-2"></path>
+                                    <path d="M6 5l14 1l-1 7h-13"></path>
+                                    <path d="M16 22l5 -5"></path>
+                                    <path d="M21 21.5v-4.5h-4.5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold" data-aos="fade" data-aos-delay="150">{% trans "Teile deine Liste" %}</h4>
+                                <p class="text-muted" data-aos="fade" data-aos-delay="300">{% trans "Erstelle gemeinsame Listen und teile sie mit deiner Familie oder Freunden. So bleibt jeder auf dem Laufenden, egal wer einkauft." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-light border-1 d-flex justify-content-center p-4">
+                        <div class="card-body">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon" data-aos="slide-up">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-cloud" style="color: white;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold" data-aos="fade" data-aos-delay="150">{% trans "Überall verfügbar" %}</h4>
+                                <p class="text-muted" data-aos="fade" data-aos-delay="300">{% trans "Synchronisiere deine Einkaufsliste über alle Geräte hinweg – sei es am Computer, Tablet oder Smartphone. Deine Liste ist immer up-to-date." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="display-6 fw-bold pb-md-4" data-aos="fade-up" style="padding-right: 0px;">{% trans "Alles für deinen perfekten Einkauf" %}</h3>
+                </div>
+                <div class="col-md-6 pt-4" data-aos="fade">
+                    <p class="text-muted mb-4" data-aos="fade" data-aos-delay="150">{% trans "Verwalte deine Einkäufe effizient und behalte immer den Überblick – egal, ob alleine oder im Team." %}</p>
+                </div>
+            </div>
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div>
+                        <div class="row gy-2 row-cols-1 row-cols-sm-2">
+                            <div class="col text-center text-md-start" data-aos="fade-up" data-aos-delay="100">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bulb fs-3 bg-secondary" style="color: white;">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path>
+                                        <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path>
+                                        <path d="M9.7 17l4.6 0"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2">{% trans "Vorschläge" %}</h5>
+                                </div>
+                                <p class="text-muted my-3">{% trans "Erhalte Artikel basierend auf deinen Einkäufen." %}</p>
+                            </div>
+                            <div class="col text-center text-md-start" data-aos="fade-up" data-aos-delay="100">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-category-2 fs-3 bg-secondary" style="color: white;">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M14 4h6v6h-6z"></path>
+                                        <path d="M4 14h6v6h-6z"></path>
+                                        <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2">{% trans "Kategorien" %}</h5>
+                                </div>
+                                <p class="text-muted my-3">{% trans "Organisiere deine Listen nach Produktgruppen." %}</p>
+                            </div>
+                            <div class="col text-center text-md-start" data-aos="fade-up" data-aos-delay="250">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bell fs-3 bg-secondary" style="color: white;">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                        <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2">{% trans "Erinnerungen" %}</h5>
+                                </div>
+                                <p class="text-muted my-3">{% trans "Erhalte Benachrichtigungen für wichtige Einkäufe." %}</p>
+                            </div>
+                            <div class="col text-center text-md-start" data-aos="fade-up" data-aos-delay="250">
+                                <div class="d-flex justify-content-center align-items-center justify-content-md-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-share-3 fs-3 bg-secondary" style="color: white;">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7z"></path>
+                                    </svg>
+                                    <h5 class="fw-bold mb-0 ms-2">{% trans "Teilen" %}</h5>
+                                </div>
+                                <p class="text-muted my-3">{% trans "Teile Listen mit Familie und Freunden." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-first order-md-last">
+                    <div><img class="rounded img-fluid w-100 fit-cover" data-aos="fade" data-aos-delay="200" style="min-height: 300px;height: 396px;" src="{% static 'img/illustrations/undraw_shopping_app_flsj.svg' %}"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div><img class="rounded img-fluid fit-cover" data-aos="fade-up" style="min-height: 300px;" src="{% static 'img/illustrations/undraw_shopping_bags_2ude.svg' %}" width="800"></div>
+                </div>
+                <div class="col">
+                    <div style="max-width: 450px;">
+                        <h3 class="fw-bold pb-md-4" data-aos="slide-up"><br>{% trans "Mach deinen Einkauf" %}&nbsp;<span class="underline">{% trans "effizienter" %}</span></h3>
+                        <p class="text-muted py-4 py-md-0" data-aos="slide-up">{% trans "Mit AdLegio Market hast du alle Tools, um deinen Einkauf optimal zu planen. Von personalisierten Empfehlungen bis hin zu gemeinsamen Listen – alles, was du brauchst, in einer übersichtlichen App." %}</p>
+                        <div class="row gy-4 row-cols-2 row-cols-md-2">
+                            <div class="col" data-aos="fade-up" data-aos-delay="150">
+                                <div><span class="fs-2 fw-bold bg-secondary" style="color: white;">40+ {% trans "Funktionen" %}</span>
+                                    <p class="fw-normal text-muted">{% trans "Entdecke smarte Features für deinen Einkauf." %}</p>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-delay="150">
+                                <div><span class="fs-2 fw-bold bg-secondary" style="color: white;">100+ {% trans "Vorlagen" %}</span>
+                                    <p class="fw-normal text-muted">{% trans "Nutze vorgefertigte oder eigene Listen." %}</p>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-delay="300">
+                                <div><span class="fs-2 fw-bold bg-secondary" style="color: white;">123+ {% trans "Nutzer" %}</span>
+                                    <p class="fw-normal text-muted">{% trans "Schließe dich unserer wachsenden Community an." %}</p>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-delay="300">
+                                <div><span class="fs-2 fw-bold bg-secondary" style="color: white;">64+ {% trans "Stunden gespart" %}</span>
+                                    <p class="fw-normal text-muted">{% trans "Spare Zeit mit optimaler Einkaufsplanung." %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-4 py-xl-5">
+        <div class="container" style="border-radius: 0px;">
+            <div class="border rounded border-0 border-primary overflow-hidden" data-aos="fade" style="background: #457B9D;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex flex-column justify-content-center" style="border-radius: 8px;">
+                        <div class="text-white p-4 p-md-5">
+                            <h2 class="fw-bold mb-3" style="color: white;">{% trans "Bist du bereit, nie wieder die Milch zu vergessen?" %}</h2>
+                            <p class="mb-4">{% trans "Schließe dich uns an und erlebe die Macht einer organisierten Einkaufsliste. Registriere dich jetzt und lass den Einkaufsstress hinter dir!" %}</p>
+                            <div class="my-3"><a class="btn btn-secondary me-2 mt-2" role="button" data-aos="fade" data-aos-delay="250" href="{% url 'signup' %}" style="border-radius: 8px;">{% trans "Jetzt registrieren" %}</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;padding: 38px;"><img class="fit-contain pt-5 pt-md-0" src="{% static 'img/illustrations/undraw_access_account_re_8spm.svg' %}" style="height: auto;width: 344px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-3">
+        <div class="container py-3 py-xl-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="display-6 fw-bold mb-4" data-aos="fade">{% trans "Finde den perfekten" %}&nbsp;<span class="underline">{% trans "Plan" %}</span>&nbsp;{% trans "für dich" %}</h2>
+                    <p class="text-muted" data-aos="fade" data-aos-delay="150">{% trans "Wähle den Plan, der am besten zu deinem Einkaufsverhalten passt. Starte kostenlos oder entdecke mehr Funktionen mit unseren Premium-Plänen." %}</p>
+                </div>
+            </div>
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col" data-aos="slide-up">
+                    <div class="card border-0 h-100">
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <h6 class="fw-bold text-muted">{% trans "Basic" %}</h6>
+                                <h6 class="text-muted">{% trans "Perfekt für den gelegentlichen Einkäufer." %}</h6>
+                                <h4 class="display-5 fw-bold mb-4">{% trans "Kostenlos" %}</h4>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Erstelle und teile eine Einkaufsliste" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Kategorisiere deine Artikel" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Keine Werbung" %}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="slide-up" data-aos-delay="100">
+                    <div class="card border-secondary border-2 h-100" style="border-color: #E63946;">
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <span class="badge bg-secondary position-absolute top-0 end-0 rounded-bottom-left text-uppercase" style="color: #A8DADC;">{% trans "Most Popular" %}</span>
+                            <div>
+                                <h6 class="fw-bold text-muted">{% trans "Pro" %}</h6>
+                                <h6 class="text-muted">{% trans "Für regelmäßige Einkäufer, die mehr Kontrolle wollen." %}</h6>
+                                <h4 class="display-5 fw-bold mb-4">€19</h4>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Alles aus dem Basic-Plan" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Unbegrenzte Listen und Kategorien" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Team-Funktionen für gemeinsames Einkaufen" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Premium-Support" %}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="slide-up" data-aos-delay="200">
+                    <div class="card border-0 h-100">
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div class="pb-4">
+                                <h6 class="fw-bold text-muted">{% trans "Enterprise" %}</h6>
+                                <h6 class="text-muted">{% trans "Ideal für Familien und kleine Teams." %}</h6>
+                                <h4 class="display-5 fw-bold mb-4">€29</h4>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Alles aus dem Pro-Plan" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Erstelle Gruppenlisten für mehrere Nutzer" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Intelligente Einkaufserinnerungen" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Priorisierungen und Budget-Tracking" %}</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-check fs-5 text-primary-emphasis">
+                                            <path stroke="none" d="M5 12l5 5l10 -10"></path>
+                                        </svg></span><span>{% trans "Erweiterter Support" %}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-4 py-xl-5 mb-5">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="display-6 fw-bold mb-5"><span data-aos="fade" class="pb-3 underline">{% trans "FAQ" %}<br></span></h2>
+                    <p class="text-muted mb-5" data-aos="fade" data-aos-delay="150">{% trans "Hier findest du Antworten auf die häufigsten Fragen rund um AdLegio Market. Solltest du weitere Fragen haben, zögere nicht, uns zu kontaktieren!" %}</p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-8 mx-auto">
+                    <div class="accordion text-muted" role="tablist" id="accordion-1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1" data-aos="fade">
+                                <span style="color: rgb(0, 0, 0);">{% trans "Wie funktioniert AdLegio Market?" %}</span></button></h2>
+                            <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
+                                <div class="accordion-body">
+                                    <p>{% trans "AdLegio Market hilft dir, deine Einkaufsliste zu erstellen, zu organisieren und zu teilen. Du kannst Artikel hinzufügen, Kategorien erstellen und deine Liste mit Familie und Freunden synchronisieren." %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2" data-aos="fade" data-aos-delay="100" style="color: black;">{% trans "Ist die Nutzung von AdLegio Market kostenlos?" %}</button></h2>
+                            <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+                                <div class="accordion-body">
+                                    <p class="mb-0">{% trans "Ja, unser Basisplan ist völlig kostenlos. Du kannst jedoch auf unsere Pro- und Enterprise-Pläne upgraden, um zusätzliche Funktionen wie erweiterte Listen und Team-Shopping zu nutzen." %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="true" aria-controls="accordion-1 .item-3" data-aos="fade" data-aos-delay="200" style="color: black;">{% trans "Kann ich meine Listen mit anderen teilen?" %}</button></h2>
+                            <div class="accordion-collapse collapse show item-3" role="tabpanel" data-bs-parent="#accordion-1">
+                                <div class="accordion-body">
+                                    <p class="mb-0">{% trans "Ja, du kannst deine Einkaufsliste mit anderen teilen und in Echtzeit zusammenarbeiten. Dies ist ideal für Familien oder Gruppen, die gemeinsam einkaufen möchten." %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-4 py-xl-5">
+        <div class="container">
+            <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5" data-aos="slide-up">
+                <div class="pb-2 pb-lg-1">
+                    <h2 class="fw-bold text-secondary mb-2">{% trans "Unsicher, welcher Plan zu dir passt?" %}</h2>
+                    <p class="mb-0">{% trans "Kontaktiere uns wenn du noch Fragen hast." %}</p>
+                </div>
+                <div class="my-2"><a class="btn btn-light fs-5 py-2 px-4" role="button" data-aos="fade" data-aos-delay="150" href="{% url 'impressum' %}" style="border-radius: 8px;">{% trans "Kontaktieren" %}</a></div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

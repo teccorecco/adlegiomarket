@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block content %}
+<section class="py-3 mt-5">
+    <div class="container py-4 py-xl-5">
+        <div class="row gy-4 gy-md-0">
+            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div style="max-width: 350px;">
+                    <h1 class="display-6 fw-bold mb-4" data-aos="fade">{% trans "Alles was dein Team braucht, an einem" %}&nbsp;<span class="underline">{% trans "Ort" %}</span>.</h1>
+                    <p data-aos="fade" data-aos-delay="100" class="my-4">{% trans "Verwalte, plane und teile Aufgaben effizient mit unserer Plattform. Perfekt für Teams, die produktiver arbeiten möchten." %}</p>
+                    <a class="btn btn-primary btn-lg me-2" role="button" data-aos="fade" data-aos-delay="200" href="{% url 'signup' %}" style="color: white;border-radius: 8px;">{% trans "Registrieren" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <img class="rounded img-fluid w-100 fit-cover" data-aos="slide-left" style="min-height: 300px;" src="{% static 'img/illustrations/undraw_scrum_board_re_wk7v.svg' %}">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <p data-aos="fade-up" class="mb-4" style="font-size: 1.6rem;">{% trans "Von" %}&nbsp;<span class="bg-warning p-1" style="background: white;color: white;"><strong>2400+</strong></span>&nbsp;{% trans "der besten Einkäufer weltweit genutzt" %}</p>
+            <a href="#"> <img data-aos="fade" class="m-3" src="{% static 'img/brands/instacart.png' %}"></a>
+            <a href="#"> <img data-aos="fade" class="m-3" src="{% static 'img/brands/kickstarter.png' %}"></a>
+            <a href="#"> <img data-aos="fade" class="m-3" src="{% static 'img/brands/lyft.png' %}"></a>
+            <a href="#"> <img data-aos="fade" class="m-3" src="{% static 'img/brands/shopify.png' %}"></a>
+            <a href="#"> <img data-aos="fade" class="m-3" src="{% static 'img/brands/pinterest.png' %}"></a>
+            <a href="#"> <img data-aos="fade" class="m-3" src="{% static 'img/brands/twitter.png' %}"></a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6" data-aos="fade" style="text-align: center;">
+                <h3 class="display-6 fw-bold pb-4 mb-4" style="font-size: 34px;">{% trans "Funktionen, die den Einkauf" %}&nbsp;<span class="underline">{% trans "einfacher" %}</span>&nbsp;{% trans "machen" %}</h3>
+            </div>
+            <div class="col-md-8 col-xl-6 pt-4" data-aos="fade" data-aos-delay="100">
+                <p class="text-muted">{% trans "Erleichtere dir das Einkaufen mit smarten Features, die dir helfen, alles auf deiner Liste im Blick zu behalten und Zeit zu sparen." %}</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" data-aos="fade">
+            <div class="col">
+                <div class="card border-light border-1 d-flex justify-content-center p-4">
+                    <div class="card-body">
+                        <div>
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bulb" style="color: white;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path>
+                                    <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path>
+                                    <path d="M9.7 17l4.6 0"></path>
+                                </svg>
+                            </div>
+                            <h4 class="fw-bold">{% trans "Smarte Empfehlungen" %}</h4>
+                            <p class="text-muted">{% trans "Erhalte personalisierte Vorschläge basierend auf deinen Einkäufen. Nie wieder etwas vergessen!" %}</p>
+                            <a class="fw-bold" href="#">{% trans "Erfahre mehr" %}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 12l14 0"></path>
+                                <path d="M15 16l4 -4"></path>
+                                <path d="M15 8l4 4"></path>
+                            </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-light border-1 d-flex justify-content-center p-4">
+                    <div class="card-body">
+                        <div>
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-list" style="color: white;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M9 6l11 0"></path>
+                                    <path d="M9 12l11 0"></path>
+                                    <path d="M9 18l11 0"></path>
+                                    <path d="M5 6l0 .01"></path>
+                                    <path d="M5 12l0 .01"></path>
+                                    <path d="M5 18l0 .01"></path>
+                                </svg>
+                            </div>
+                            <h4 class="fw-bold">{% trans "Gemeinsame Einkaufslisten" %}</h4>
+                            <p class="text-muted">{% trans "Teile deine Listen mit Familie oder Freunden und behaltet gemeinsam den Überblick, wer was einkauft." %}</p>
+                            <a class="fw-bold" href="#">{% trans "Erfahre mehr" %}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 12l14 0"></path>
+                                <path d="M15 16l4 -4"></path>
+                                <path d="M15 8l4 4"></path>
+                            </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-between flex-xl-column">
+                <div class="card border-light border-1 d-flex flex-grow-1 justify-content-center p-2 me-3 me-xl-0 mb-xl-4">
+                    <div class="card-body">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-category-2" style="color: white;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M14 4h6v6h-6z"></path>
+                                <path d="M4 14h6v6h-6z"></path>
+                                <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="fw-bold mb-0">{% trans "Schnelle Kategorisierung" %}</h4>
+                            <a class="fw-bold" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 12l14 0"></path>
+                                    <path d="M15 16l4 -4"></path>
+                                    <path d="M15 8l4 4"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-light border-1 d-flex flex-grow-1 justify-content-center p-2">
+                    <div class="card-body">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-4 bs-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bell" style="color: white;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="fw-bold mb-0">{% trans "Erinnerungen für deinen Einkauf" %}</h4>
+                            <a class="fw-bold" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 12l14 0"></path>
+                                    <path d="M15 16l4 -4"></path>
+                                    <path d="M15 8l4 4"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row" data-aos="fade">
+            <div class="col-md-4 mb-5">
+                <img class="rounded img-fluid" src="{% static 'img/illustrations/undraw_window_shopping_re_0kbm.svg' %}">
+            </div>
+            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 flex-grow-1">
+                    <div class="col">
+                        <div class="card border-light border-1 d-flex justify-content-center p-4">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="fw-bold">{% trans "Clever einkaufen – So behältst du den Überblick" %}</h4>
+                                    <p class="text-muted d-none d-xl-block">{% trans "Lerne, wie du deine Einkäufe besser planst und deine Einkaufsliste optimal nutzt, um Zeit und Geld zu sparen." %}</p>
+                                    <a class="fw-bold" href="#">{% trans "Erfahre mehr" %}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12l14 0"></path>
+                                        <path d="M15 16l4 -4"></path>
+                                        <path d="M15 8l4 4"></path>
+                                    </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-light border-1 d-flex justify-content-center p-4">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="fw-bold">{% trans "Sicher online einkaufen – Worauf du achten solltest" %}</h4>
+                                    <p class="text-muted d-none d-xl-block">{% trans "Schütze dich beim Online-Shopping vor Betrug und erfahre, welche Sicherheitstipps du beachten solltest." %}</p>
+                                    <a class="fw-bold" href="#">{% trans "Erfahre mehr" %}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12l14 0"></path>
+                                        <path d="M15 16l4 -4"></path>
+                                        <path d="M15 8l4 4"></path>
+                                    </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" data-aos="fade">
+            <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 flex-grow-1">
+                    <div class="col">
+                        <div class="card border-light border-1 d-flex justify-content-center p-4">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="fw-bold">{% trans "Nachhaltig einkaufen – So geht’s" %}</h4>
+                                    <p class="text-muted d-none d-xl-block">{% trans "Erfahre wie du umweltfreundliche Produkte findest und beim Einkaufen einen Beitrag zum Umweltschutz leisten kannst." %}</p>
+                                    <a class="fw-bold" href="#">{% trans "Erfahre mehr" %}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12l14 0"></path>
+                                        <path d="M15 16l4 -4"></path>
+                                        <path d="M15 8l4 4"></path>
+                                    </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-light border-1 d-flex justify-content-center p-4">
+                            <div class="card-body">
+                                <div>
+                                    <h4 class="fw-bold">{% trans "Gemeinsame Einkaufslisten – So funktioniert’s" %}</h4>
+                                    <p class="text-muted d-none d-xl-block">{% trans "Lerne, wie du Einkaufslisten mit anderen teilst und gemeinsam den Einkauf effizienter gestaltest." %}</p>
+                                    <a class="fw-bold" href="#">{% trans "Erfahre mehr" %}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right fs-3">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12l14 0"></path>
+                                        <path d="M15 16l4 -4"></path>
+                                        <path d="M15 8l4 4"></path>
+                                    </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 order-first order-md-last mb-5">
+                <img class="rounded img-fluid" src="{% static 'img/illustrations/undraw_online_groceries_a02y.svg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

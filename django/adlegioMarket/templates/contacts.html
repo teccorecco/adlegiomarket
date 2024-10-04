@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block content %}
+
+<section class="py-5 mt-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="display-6 fw-bold mb-4">{% trans "Hast du noch" %}&nbsp;<span class="underline">{% trans "Fragen" %}</span>?</h2>
+                <p class="text-muted">{% trans "Schreib uns gerne eine Nachricht und wir werden uns zeitnah bei dir melden." %}</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <div>
+                    <form class="p-3 p-xl-4" method="post" data-bs-theme="light">
+                        <div class="mb-3">
+                            <input class="shadow form-control" type="text" data-aos="fade" id="name-1" name="name" placeholder="{% trans 'Name' %}">
+                        </div>
+                        <div class="mb-3">
+                            <input class="shadow form-control" type="email" data-aos="fade" data-aos-delay="100" id="email-1" name="email" placeholder="{% trans 'Email' %}">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="shadow form-control" data-aos="fade" data-aos-delay="200" id="message-1" name="message" rows="6" placeholder="{% trans 'Nachricht' %}"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary shadow d-block w-100" type="submit" style="color: white;border-radius: 8px;">
+                                {% trans "Absenden" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4 py-xl-5 mb-5">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">{% trans "FAQ" %}<br></span></h2>
+                <p class="text-muted mb-5">{% trans "Hier findest du Antworten auf häufig gestellte Fragen rund um AdLegio Market." %}</p>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion text-muted" role="tablist" id="accordion-1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true" aria-controls="accordion-1 .item-1">
+                                {% trans "Wie kann ich eine Einkaufsliste teilen?" %}
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>{% trans "Um eine Einkaufsliste zu teilen, klicke auf 'Liste teilen' und sende den Link an Familie oder Freunde. Sie können die Liste in Echtzeit bearbeiten." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">
+                                {% trans "Kann ich Artikel in Kategorien organisieren?" %}
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>{% trans "Ja, du kannst deine Artikel in verschiedene Kategorien einteilen, wie z.B. Obst, Gemüse, Haushaltswaren, um den Überblick zu behalten." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">
+                                {% trans "Gibt es eine Erinnerungsfunktion für wichtige Einkäufe?" %}
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>{% trans "Ja, AdLegio Market bietet eine Erinnerungsfunktion, die dich an wichtige Einkäufe erinnert. So vergisst du keine wichtigen Artikel." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-4" aria-expanded="false" aria-controls="accordion-1 .item-4">
+                                {% trans "Kann ich meine Einkaufsliste auch offline nutzen?" %}
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>{% trans "Ja, die Liste ist auch offline zugänglich. Änderungen werden synchronisiert, sobald du wieder online bist." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

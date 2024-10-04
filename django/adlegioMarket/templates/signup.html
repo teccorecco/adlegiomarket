@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block content %}
+
+<section class="py-4 py-md-5 my-5">
+    <div class="container py-md-5">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img class="img-fluid w-100 mt-3" data-aos="slide-right" id="signupPic" src="{% static 'img/illustrations/undraw_fill_form_re_cwyf.svg' %}">
+            </div>
+            <div class="col-md-5 col-xl-4 text-center text-md-start">
+                <h2 class="display-6 fw-bold mb-5">
+                    <span data-aos="fade-up" class="underline pb-1">
+                        <strong>{% trans "Registrieren" %}</strong>
+                    </span>
+                </h2>
+                <div class="mb-3">
+                    <input class="shadow-sm form-control" type="email" id="signup-email" placeholder="{% trans 'Email' %}">
+                </div>
+                <div class="mb-3">
+                    <input class="shadow-sm form-control" type="password" id="signup-password" placeholder="{% trans 'Password' %}">
+                </div>
+                <div class="mb-3">
+                    <input class="shadow-sm form-control" type="password" id="signup-password-repeat" placeholder="{% trans 'Repeat Password' %}">
+                </div>
+                <div class="mb-5">
+                    <button class="btn btn-primary shadow" id="signup-button" style="color: white;border-radius: 7px;">{% trans "Account erstellen" %}</button>
+                </div>
+                <p class="text-muted">
+                    {% trans "Hast du schon einen Account?" %}
+                    <br>
+                    <a href="{% url 'login' %}">{% trans "Einloggen" %}&nbsp;</a>&nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('signup-button').addEventListener('click', function() {
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    const password_repeat = document.getElementById('signup-password-repeat').value;
+
+    fetch('{% url "signup" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}',
+        },
+        body: JSON.stringify({ email, password, password_repeat })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Registration failed');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert(data.message); // Show success message
+        window.location.href = "user/login"; // Redirect after successful registration
+    })
+    .catch(error => {
+        alert(error.message); // Show error message
+    });
+});
+</script>
+
+{% endblock content %}

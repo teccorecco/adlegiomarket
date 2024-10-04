@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block content %}
+
+<section class="py-5 mt-5">
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="display-6 fw-bold mb-4">{% trans "Hier Einkaufsliste" %}</h2>
+                <p class="text-muted">{% trans "Hier werden die Funktionen für die Einkaufsliste sein" %}</p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <form method="post" class="d-flex">
+                    {% csrf_token %}
+                    <input type="text" name="item_name" placeholder="{% trans 'Artikelname' %}" class="form-control me-2" required>
+                    <button type="submit" class="btn btn-primary" style="color: white; border-radius: 8px;">{% trans "Hinzufügen" %}</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Random Link Section -->
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4 class="fw-bold">{% trans "Teilen" %}</h4>
+                <p class="text-muted">{% trans "Teile diesen Link mit deinen Freunden, um die Liste zu bearbeiten:" %}</p>
+                <input type="text" class="form-control" value="{{ request.build_absolute_uri }}{{ short_link }}" readonly>
+                <button class="btn btn-secondary mt-2" onclick="copyToClipboard()">{% trans "Link kopieren" %}</button>
+            </div>
+        </div>
+        
+
+        <!-- Categories Section -->
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4 class="fw-bold">{% trans "Kategorien" %}</h4>
+                <div class="list-group">
+                    {% for category in items.values|dictsort:"category" %}
+                        <button class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#category-{{ category.category }}">
+                            {{ category.category }} <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div id="category-{{ category.category }}" class="collapse show"> <!-- Show by default -->
+                            <ul class="list-group" style="border: none;">
+                                {% for item in items %}
+                                    {% if item.category == category.category %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {{ item.name }}
+                                            <button class="btn btn-danger btn-sm" onclick="deleteItem({{ item.id }})">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function deleteItem(itemId) {
+        if (confirm("Möchtest du diesen Artikel wirklich löschen?")) {
+            fetch(`/einkaufsliste/delete/${itemId}/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken'),  // Funktion um CSRF-Token zu erhalten
+                },
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Wenn erfolgreich, die Seite aktualisieren
+                    location.reload(); // Seite neu laden, um den Artikel zu entfernen
+                } else {
+                    alert("Fehler beim Löschen des Artikels.");
+                }
+            });
+        }
+    }
+    
+    // Funktion um den CSRF-Token zu bekommen
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Überprüfe, ob das Cookie den gesuchten Namen hat
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+</script>
+
+{% endblock content %}

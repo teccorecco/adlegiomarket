@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block content %}
+<section class="py-3 mt-5">
+    <div class="container py-4 py-xl-5">
+        <div class="row gy-4 gy-md-0">
+            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div style="max-width: 350px;">
+                    <h1 class="display-5 fw-bold mb-4" data-aos="fade">{% trans "Wer wir sind und was wir" %}&nbsp;<span class="underline">{% trans "machen" %}</span>.</h1>
+                    <p class="text-muted my-4" data-aos="fade" data-aos-delay="100">{% trans "Hier stellen wir unser fleißiges und junges Team vor. Lernt uns bei unserer Reise kennen." %}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div><img class="rounded img-fluid w-100 fit-cover" data-aos="slide-left" style="min-height: 300px;" src="{% static 'img/illustrations/undraw_teamwork_hpdk.svg' %}"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container py-3 py-xl-5">
+        <div class="row gy-4 row-cols-2 row-cols-md-4 d-flex d-xl-flex d-xxl-flex justify-content-center justify-content-xl-center justify-content-xxl-center" data-aos="fade" style="text-align: center;">
+            <div class="col">
+                <div class="card border-0 shadow-none">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="{% static 'img/borisov.jpg' %}">
+                        <h5 class="fw-bold text-primary card-title mb-0"><strong>Iliya Borisov</strong></h5>
+                        <p class="text-muted card-text mb-2">Lead Designer</p>
+                        <ul class="list-inline fs-6 text-muted w-100 mb-0">
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-facebook"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-twitter"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-instagram"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 shadow-none">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="{% static 'img/eder.jpg' %}">
+                        <h5 class="fw-bold text-primary card-title mb-0"><strong>Jonas Eder</strong></h5>
+                        <p class="text-muted card-text mb-2">Legal Department</p>
+                        <ul class="list-inline fs-6 text-muted w-100 mb-0">
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-facebook"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-twitter"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-instagram"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 shadow-none">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="{% static 'img/wagner.jpg' %}">
+                        <h5 class="fw-bold text-primary card-title mb-0"><strong>Robin Wagner</strong></h5>
+                        <p class="text-muted card-text mb-2">Senior Backend Developer</p>
+                        <ul class="list-inline fs-6 text-muted w-100 mb-0">
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-facebook"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-twitter"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-instagram"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4 py-xl-5">
+        <div class="row gy-4 row-cols-2 row-cols-md-4 d-md-flex d-xl-flex d-xxl-flex justify-content-md-center justify-content-xl-center justify-content-xxl-center" style="text-align: center;">
+            <div class="col">
+                <div class="card border-0 shadow-none">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="{% static 'img/rech.jpg' %}">
+                        <h5 class="fw-bold text-primary card-title mb-0"><strong>Lucas Rech</strong></h5>
+                        <p class="text-muted card-text mb-2">Junior Fullstack Developer</p>
+                        <ul class="list-inline fs-6 text-muted w-100 mb-0">
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-facebook"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-twitter"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-instagram"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 shadow-none">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="{% static 'img/pochtar.jpg' %}">
+                        <h5 class="fw-bold text-primary card-title mb-0"><strong>Rene Pochtar</strong></h5>
+                        <p class="text-muted card-text mb-2">Senior Facility Manager</p>
+                        <ul class="list-inline fs-6 text-muted w-100 mb-0">
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-facebook"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-twitter"></i></div>
+                            </li>
+                            <li class="list-inline-item text-center">
+                                <div class="d-flex flex-column align-items-center"><i class="bi bi-instagram"></i></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

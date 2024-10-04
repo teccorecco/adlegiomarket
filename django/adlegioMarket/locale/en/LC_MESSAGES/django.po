@@ -1,0 +1,645 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-04 15:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\templates\aboutus.html:9
+msgid "Wer wir sind und was wir"
+msgstr "Who we are and what we"
+
+#: .\templates\aboutus.html:9 .\templates\features.html:35
+msgid "machen"
+msgstr "do"
+
+#: .\templates\aboutus.html:10
+msgid ""
+"Hier stellen wir unser fleißiges und junges Team vor. Lernt uns bei unserer "
+"Reise kennen."
+msgstr "Here we introduce our diligent and young team. Get to know us on our journey."
+
+#: .\templates\base.html:9 .\templates\base.html:31 .\templates\base.html:107
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\base.html:27
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: .\templates\base.html:32 .\templates\base.html:108
+msgid "Features"
+msgstr "Features"
+
+#: .\templates\base.html:33 .\templates\base.html:115
+msgid "Über Uns"
+msgstr "About Us"
+
+#: .\templates\base.html:34
+msgid "Einkaufsliste"
+msgstr "Shopping List"
+
+#: .\templates\base.html:35 .\templates\base.html:123
+msgid "Impressum"
+msgstr "Legal Notice"
+
+#: .\templates\base.html:89
+msgid "login"
+msgstr "Login"
+
+#: .\templates\base.html:102
+msgid "organisiert, einfach, überall"
+msgstr "organized, simple, everywhere"
+
+#: .\templates\base.html:105
+msgid "Seiten"
+msgstr "Pages"
+
+#: .\templates\base.html:109 .\templates\features.html:11
+#: .\templates\signup.html:14
+msgid "Registrieren"
+msgstr "Sign Up"
+
+#: .\templates\base.html:113
+msgid "Die Firma"
+msgstr "The Company"
+
+#: .\templates\base.html:116
+msgid "Kontakt"
+msgstr "Contact"
+
+#: .\templates\base.html:117 .\templates\login.html:13
+msgid "Login"
+msgstr "Login"
+
+#: .\templates\base.html:121
+msgid "Rechtliches"
+msgstr "Legal"
+
+#: .\templates\base.html:124
+msgid "AGB & Datenschutz"
+msgstr "Terms & Privacy"
+
+#: .\templates\base.html:125
+msgid "Cookies"
+msgstr "Cookies"
+
+#: .\templates\contacts.html:9
+msgid "Hast du noch"
+msgstr "Do you still have"
+
+#: .\templates\contacts.html:9
+msgid "Fragen"
+msgstr "Questions"
+
+#: .\templates\contacts.html:10
+msgid ""
+"Schreib uns gerne eine Nachricht und wir werden uns zeitnah bei dir melden."
+msgstr "Feel free to send us a message, and we will get back to you promptly."
+
+#: .\templates\contacts.html:18
+msgid "Name"
+msgstr "Name"
+
+#: .\templates\contacts.html:21 .\templates\forgotten-password.html:16
+#: .\templates\login.html:19 .\templates\signup.html:19
+msgid "Email"
+msgstr "Email"
+
+#: .\templates\contacts.html:24
+msgid "Nachricht"
+msgstr "Message"
+
+#: .\templates\contacts.html:28
+msgid "Absenden"
+msgstr "Submit"
+
+#: .\templates\contacts.html:42 .\templates\index.html:323
+msgid "FAQ"
+msgstr "FAQ"
+
+#: .\templates\contacts.html:43
+msgid ""
+"Hier findest du Antworten auf häufig gestellte Fragen rund um AdLegio Market."
+msgstr "Here you can find answers to frequently asked questions about AdLegio Market."
+
+#: .\templates\contacts.html:52
+msgid "Wie kann ich eine Einkaufsliste teilen?"
+msgstr "How can I share a shopping list?"
+
+#: .\templates\contacts.html:57
+msgid ""
+"Um eine Einkaufsliste zu teilen, klicke auf 'Liste teilen' und sende den "
+"Link an Familie oder Freunde. Sie können die Liste in Echtzeit bearbeiten."
+msgstr "To share a shopping list, click 'Share List' and send the link to family or friends. They can edit the list in real-time."
+
+#: .\templates\contacts.html:64
+msgid "Kann ich Artikel in Kategorien organisieren?"
+msgstr "Can I organize items into categories?"
+
+#: .\templates\contacts.html:69
+msgid ""
+"Ja, du kannst deine Artikel in verschiedene Kategorien einteilen, wie z.B. "
+"Obst, Gemüse, Haushaltswaren, um den Überblick zu behalten."
+msgstr "Yes, you can categorize your items, like fruits, vegetables, household goods, to keep everything organized."
+
+#: .\templates\contacts.html:76
+msgid "Gibt es eine Erinnerungsfunktion für wichtige Einkäufe?"
+msgstr "Is there a reminder feature for important purchases?"
+
+#: .\templates\contacts.html:81
+msgid ""
+"Ja, AdLegio Market bietet eine Erinnerungsfunktion, die dich an wichtige "
+"Einkäufe erinnert. So vergisst du keine wichtigen Artikel."
+msgstr "Yes, AdLegio Market offers a reminder feature that alerts you to important purchases, so you don't forget key items."
+
+#: .\templates\contacts.html:88
+msgid "Kann ich meine Einkaufsliste auch offline nutzen?"
+msgstr "Can I use my shopping list offline?"
+
+#: .\templates\contacts.html:93
+msgid ""
+"Ja, die Liste ist auch offline zugänglich. Änderungen werden synchronisiert, "
+"sobald du wieder online bist."
+msgstr "Yes, the list is accessible offline. Changes will sync as soon as you're back online."
+
+#: .\templates\einkaufsliste.html:9
+msgid "Hier Einkaufsliste"
+msgstr "Here is the shopping list"
+
+#: .\templates\einkaufsliste.html:10
+msgid "Hier werden die Funktionen für die Einkaufsliste sein"
+msgstr "Here the features for the shopping list will be"
+
+#: .\templates\features.html:9
+msgid "Alles was dein Team braucht, an einem"
+msgstr "Everything your team needs, in one"
+
+#: .\templates\features.html:9
+msgid "Ort"
+msgstr "place"
+
+#: .\templates\features.html:10
+msgid ""
+"Verwalte, plane und teile Aufgaben effizient mit unserer Plattform. Perfekt "
+"für Teams, die produktiver arbeiten möchten."
+msgstr "Manage, plan, and share tasks efficiently with our platform. Perfect for teams looking to work more productively."
+
+#: .\templates\features.html:21
+msgid "Von"
+msgstr "Used by"
+
+#: .\templates\features.html:21
+msgid "der besten Einkäufer weltweit genutzt"
+msgstr "the best shoppers worldwide"
+
+#: .\templates\features.html:35
+msgid "Funktionen, die den Einkauf"
+msgstr "Features that make shopping"
+
+#: .\templates\features.html:35
+msgid "einfacher"
+msgstr "easier"
+
+#: .\templates\features.html:38
+msgid ""
+"Erleichtere dir das Einkaufen mit smarten Features, die dir helfen, alles "
+"auf deiner Liste im Blick zu behalten und Zeit zu sparen."
+msgstr "Make shopping easier with smart features that help you keep track of everything on your list and save time."
+
+#: .\templates\features.html:54
+msgid "Smarte Empfehlungen"
+msgstr "Smart Recommendations"
+
+#: .\templates\features.html:55
+msgid ""
+"Erhalte personalisierte Vorschläge basierend auf deinen Einkäufen. Nie "
+"wieder etwas vergessen!"
+msgstr "Get personalized suggestions based on your shopping. Never forget anything again!"
+
+#: .\templates\features.html:56 .\templates\features.html:83
+#: .\templates\features.html:158 .\templates\features.html:174
+#: .\templates\features.html:196 .\templates\features.html:212
+msgid "Erfahre mehr"
+msgstr "Learn more"
+
+#: .\templates\features.html:81
+msgid "Gemeinsame Einkaufslisten"
+msgstr "Shared Shopping Lists"
+
+#: .\templates\features.html:82
+msgid ""
+"Teile deine Listen mit Familie oder Freunden und behaltet gemeinsam den "
+"Überblick, wer was einkauft."
+msgstr "Share your lists with family or friends and keep track of who buys what together."
+
+#: .\templates\features.html:106
+msgid "Schnelle Kategorisierung"
+msgstr "Quick Categorization"
+
+#: .\templates\features.html:128
+msgid "Erinnerungen für deinen Einkauf"
+msgstr "Reminders for your shopping"
+
+#: .\templates\features.html:156
+msgid "Clever einkaufen – So behältst du den Überblick"
+msgstr "Shop smart – Keep track"
+
+#: .\templates\features.html:157
+msgid ""
+"Lerne, wie du deine Einkäufe besser planst und deine Einkaufsliste optimal "
+"nutzt, um Zeit und Geld zu sparen."
+msgstr "Learn how to plan your shopping better and make optimal use of your shopping list to save time and money."
+
+#: .\templates\features.html:172
+msgid "Sicher online einkaufen – Worauf du achten solltest"
+msgstr "Shop safely online – What you should be aware of"
+
+#: .\templates\features.html:173
+msgid ""
+"Schütze dich beim Online-Shopping vor Betrug und erfahre, welche "
+"Sicherheitstipps du beachten solltest."
+msgstr "Protect yourself from fraud when shopping online and learn what safety tips you should consider."
+
+#: .\templates\features.html:194
+msgid "Nachhaltig einkaufen – So geht’s"
+msgstr "Shop sustainably – Here's how"
+
+#: .\templates\features.html:195
+msgid ""
+"Erfahre wie du umweltfreundliche Produkte findest und beim Einkaufen einen "
+"Beitrag zum Umweltschutz leisten kannst."
+msgstr "Learn how to find eco-friendly products and contribute to environmental protection while shopping."
+
+#: .\templates\features.html:210
+msgid "Gemeinsame Einkaufslisten – So funktioniert’s"
+msgstr "Shared Shopping Lists – Here's how"
+
+#: .\templates\features.html:211
+msgid ""
+"Lerne, wie du Einkaufslisten mit anderen teilst und gemeinsam den Einkauf "
+"effizienter gestaltest."
+msgstr "Learn how to share shopping lists with others and make shopping more efficient together."
+
+#: .\templates\forgotten-password.html:12
+msgid "Hast du dein"
+msgstr "Did you forget your"
+
+#: .\templates\forgotten-password.html:12
+msgid "Passwort"
+msgstr "password"
+
+#: .\templates\forgotten-password.html:12
+msgid "vergessen?"
+msgstr "?"
+
+#: .\templates\forgotten-password.html:13
+msgid ""
+"Hier kannst du deine Email-Adresse, die du bei der Registration angegeben "
+"hast, eingeben und bekommst einen Reset-Link zugeschickt."
+msgstr "Here you can enter the email address you provided during registration, and you'll receive a reset link."
+
+#: .\templates\forgotten-password.html:19
+msgid "Passwort zurücksetzen"
+msgstr "Reset Password"
+
+#: .\templates\index.html:10
+msgid "Dein smarter Einkaufshelfer"
+msgstr "Your smart shopping assistant"
+
+#: .\templates\index.html:11
+msgid "organisiert - einfach - überall"
+msgstr "organized - simple - everywhere"
+
+#: .\templates\index.html:14 .\templates\index.html:200
+msgid "Jetzt registrieren"
+msgstr "Sign up now"
+
+#: .\templates\index.html:40
+msgid "Smarte Einkaufsplanung"
+msgstr "Smart Shopping Planning"
+
+#: .\templates\index.html:41
+msgid ""
+"Plane deinen Einkauf effizienter mit personalisierten Vorschlägen und "
+"automatischen Kategorisierungen. Nie wieder den Überblick verlieren!"
+msgstr "Plan your shopping more efficiently with personalized suggestions and automatic categorizations. Never lose track again!"
+
+#: .\templates\index.html:60
+msgid "Teile deine Liste"
+msgstr "Share your list"
+
+#: .\templates\index.html:61
+msgid ""
+"Erstelle gemeinsame Listen und teile sie mit deiner Familie oder Freunden. "
+"So bleibt jeder auf dem Laufenden, egal wer einkauft."
+msgstr "Create shared lists and share them with your family or friends. This way, everyone stays updated, no matter who is shopping."
+
+#: .\templates\index.html:76
+msgid "Überall verfügbar"
+msgstr "Available everywhere"
+
+#: .\templates\index.html:77
+msgid ""
+"Synchronisiere deine Einkaufsliste über alle Geräte hinweg – sei es am "
+"Computer, Tablet oder Smartphone. Deine Liste ist immer up-to-date."
+msgstr "Sync your shopping list across all devices – whether on computer, tablet, or smartphone. Your list is always up-to-date."
+
+#: .\templates\index.html:89
+msgid "Alles für deinen perfekten Einkauf"
+msgstr "Everything for your perfect shopping"
+
+#: .\templates\index.html:92
+msgid ""
+"Verwalte deine Einkäufe effizient und behalte immer den Überblick – egal, ob "
+"alleine oder im Team."
+msgstr "Manage your shopping efficiently and always stay on top – whether alone or in a team."
+
+#: .\templates\index.html:107
+msgid "Vorschläge"
+msgstr "Suggestions"
+
+#: .\templates\index.html:109
+msgid "Erhalte Artikel basierend auf deinen Einkäufen."
+msgstr "Receive items based on your shopping."
+
+#: .\templates\index.html:120
+msgid "Kategorien"
+msgstr "Categories"
+
+#: .\templates\index.html:122
+msgid "Organisiere deine Listen nach Produktgruppen."
+msgstr "Organize your lists by product groups."
+
+#: .\templates\index.html:131
+msgid "Erinnerungen"
+msgstr "Reminders"
+
+#: .\templates\index.html:133
+msgid "Erhalte Benachrichtigungen für wichtige Einkäufe."
+msgstr "Receive notifications for important purchases."
+
+#: .\templates\index.html:141
+msgid "Teilen"
+msgstr "Share"
+
+#: .\templates\index.html:143
+msgid "Teile Listen mit Familie und Freunden."
+msgstr "Share lists with family and friends."
+
+#: .\templates\index.html:162
+msgid "Mach deinen Einkauf"
+msgstr "Make your shopping"
+
+#: .\templates\index.html:162
+msgid "effizienter"
+msgstr "more efficient"
+
+#: .\templates\index.html:163
+msgid ""
+"Mit AdLegio Market hast du alle Tools, um deinen Einkauf optimal zu planen. "
+"Von personalisierten Empfehlungen bis hin zu gemeinsamen Listen – alles, was "
+"du brauchst, in einer übersichtlichen App."
+msgstr ""
+"With AdLegio Market, you have all the tools to plan your shopping optimally. From personalized recommendations to shared lists – everything you need in a clear app."
+
+#: .\templates\index.html:166
+msgid "Funktionen"
+msgstr "Features"
+
+#: .\templates\index.html:167
+msgid "Entdecke smarte Features für deinen Einkauf."
+msgstr "Discover smart features for your shopping."
+
+#: .\templates\index.html:171
+msgid "Vorlagen"
+msgstr "Templates"
+
+#: .\templates\index.html:172
+msgid "Nutze vorgefertigte oder eigene Listen."
+msgstr "Use pre-made or custom lists."
+
+#: .\templates\index.html:176
+msgid "Nutzer"
+msgstr "Users"
+
+#: .\templates\index.html:177
+msgid "Schließe dich unserer wachsenden Community an."
+msgstr "Join our growing community."
+
+#: .\templates\index.html:181
+msgid "Stunden gespart"
+msgstr "Hours saved"
+
+#: .\templates\index.html:182
+msgid "Spare Zeit mit optimaler Einkaufsplanung."
+msgstr "Save time with optimal shopping planning."
+
+#: .\templates\index.html:198
+msgid "Bist du bereit, nie wieder die Milch zu vergessen?"
+msgstr "Are you ready to never forget the milk again?"
+
+#: .\templates\index.html:199
+msgid ""
+"Schließe dich uns an und erlebe die Macht einer organisierten Einkaufsliste. "
+"Registriere dich jetzt und lass den Einkaufsstress hinter dir!"
+msgstr ""
+"Join us and experience the power of an organized shopping list. Sign up now and leave shopping stress behind!"
+
+#: .\templates\index.html:213
+msgid "Finde den perfekten"
+msgstr "Find the perfect"
+
+#: .\templates\index.html:213
+msgid "Plan"
+msgstr "Plan"
+
+#: .\templates\index.html:213
+msgid "für dich"
+msgstr "for you"
+
+#: .\templates\index.html:214
+msgid ""
+"Wähle den Plan, der am besten zu deinem Einkaufsverhalten passt. Starte "
+"kostenlos oder entdecke mehr Funktionen mit unseren Premium-Plänen."
+msgstr ""
+"Choose the plan that best suits your shopping behavior. Start for free or discover more features with our premium plans."
+
+#: .\templates\index.html:222
+msgid "Basic"
+msgstr "Basic"
+
+#: .\templates\index.html:223
+msgid "Perfekt für den gelegentlichen Einkäufer."
+msgstr "Perfect for the occasional shopper."
+
+#: .\templates\index.html:224
+msgid "Kostenlos"
+msgstr "Free"
+
+#: .\templates\index.html:230
+msgid "Erstelle und teile eine Einkaufsliste"
+msgstr "Create and share a shopping list"
+
+#: .\templates\index.html:235
+msgid "Kategorisiere deine Artikel"
+msgstr "Categorize your items"
+
+#: .\templates\index.html:240
+msgid "Keine Werbung"
+msgstr "No Ads"
+
+#: .\templates\index.html:249
+msgid "Most Popular"
+msgstr "Most Popular"
+
+#: .\templates\index.html:251
+msgid "Pro"
+msgstr "Pro"
+
+#: .\templates\index.html:252
+msgid "Für regelmäßige Einkäufer, die mehr Kontrolle wollen."
+msgstr "For regular shoppers who want more control."
+
+#: .\templates\index.html:259
+msgid "Alles aus dem Basic-Plan"
+msgstr "Everything from the Basic Plan"
+
+#: .\templates\index.html:264
+msgid "Unbegrenzte Listen und Kategorien"
+msgstr "Unlimited lists and categories"
+
+#: .\templates\index.html:269
+msgid "Team-Funktionen für gemeinsames Einkaufen"
+msgstr "Team features for collaborative shopping"
+
+#: .\templates\index.html:274
+msgid "Premium-Support"
+msgstr "Premium Support"
+
+#: .\templates\index.html:284
+msgid "Enterprise"
+msgstr "Enterprise"
+
+#: .\templates\index.html:285
+msgid "Ideal für Familien und kleine Teams."
+msgstr "Ideal for families and small teams."
+
+#: .\templates\index.html:292
+msgid "Alles aus dem Pro-Plan"
+msgstr "Everything from the Pro Plan"
+
+#: .\templates\index.html:297
+msgid "Erstelle Gruppenlisten für mehrere Nutzer"
+msgstr "Create group lists for multiple users"
+
+#: .\templates\index.html:301
+msgid "Intelligente Einkaufserinnerungen"
+msgstr "Smart shopping reminders"
+
+#: .\templates\index.html:305
+msgid "Priorisierungen und Budget-Tracking"
+msgstr "Prioritization and budget tracking"
+
+#: .\templates\index.html:309
+msgid "Erweiterter Support"
+msgstr "Extended support"
+
+#: .\templates\index.html:324
+msgid ""
+"Hier findest du Antworten auf die häufigsten Fragen rund um AdLegio Market. "
+"Solltest du weitere Fragen haben, zögere nicht, uns zu kontaktieren!"
+msgstr ""
+"Here you can find answers to the most frequently asked questions about AdLegio Market. If you have any further questions, don't hesitate to contact us!"
+
+#: .\templates\index.html:332
+msgid "Wie funktioniert AdLegio Market?"
+msgstr "How does AdLegio Market work?"
+
+#: .\templates\index.html:335
+msgid ""
+"AdLegio Market hilft dir, deine Einkaufsliste zu erstellen, zu organisieren "
+"und zu teilen. Du kannst Artikel hinzufügen, Kategorien erstellen und deine "
+"Liste mit Familie und Freunden synchronisieren."
+msgstr ""
+"AdLegio Market helps you create, organize, and share your shopping list. You can add items, create categories, and sync your list with family and friends."
+
+#: .\templates\index.html:340
+msgid "Ist die Nutzung von AdLegio Market kostenlos?"
+msgstr "Is the use of AdLegio Market free?"
+
+#: .\templates\index.html:343
+msgid ""
+"Ja, unser Basisplan ist völlig kostenlos. Du kannst jedoch auf unsere Pro- "
+"und Enterprise-Pläne upgraden, um zusätzliche Funktionen wie erweiterte "
+"Listen und Team-Shopping zu nutzen."
+msgstr ""
+"Yes, our basic plan is completely free. However, you can upgrade to our Pro and Enterprise plans for additional features like extended lists and team shopping."
+
+#: .\templates\index.html:348
+msgid "Kann ich meine Listen mit anderen teilen?"
+msgstr "Can I share my lists with others?"
+
+#: .\templates\index.html:351
+msgid ""
+"Ja, du kannst deine Einkaufsliste mit anderen teilen und in Echtzeit "
+"zusammenarbeiten. Dies ist ideal für Familien oder Gruppen, die gemeinsam "
+"einkaufen möchten."
+msgstr ""
+"Yes, you can share your shopping list with others and collaborate in real time. This is ideal for families or groups who want to shop together."
+
+#: .\templates\index.html:365
+msgid "Unsicher, welcher Plan zu dir passt?"
+msgstr "Unsure which plan is right for you?"
+
+#: .\templates\index.html:366
+msgid "Kontaktiere uns wenn du noch Fragen hast."
+msgstr "Contact us if you have any questions."
+
+#: .\templates\index.html:368
+msgid "Kontaktieren"
+msgstr "Contact"
+
+#: .\templates\login.html:22 .\templates\signup.html:22
+msgid "Password"
+msgstr "Password"
+
+#: .\templates\login.html:25
+msgid "Log in"
+msgstr "Log in"
+
+#: .\templates\login.html:29
+msgid "Passwort vergessen?"
+msgstr "Forgot password?"
+
+#: .\templates\login.html:32
+msgid "Noch kein Konto? Hier registrieren"
+msgstr "No account yet? Register here"
+
+#: .\templates\signup.html:25
+msgid "Repeat Password"
+msgstr "Repeat Password"
+
+#: .\templates\signup.html:28
+msgid "Account erstellen"
+msgstr "Create Account"
+
+#: .\templates\signup.html:32
+msgid "Hast du schon einen Account?"
+msgstr "Already have an account?"
+
+#: .\templates\signup.html:34
+msgid "Einloggen"
+msgstr "Log in"

@@ -1,0 +1,638 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-04 15:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\templates\aboutus.html:9
+msgid "Wer wir sind und was wir"
+msgstr "我们是谁以及我们所做的"
+
+#: .\templates\aboutus.html:9 .\templates\features.html:35
+msgid "machen"
+msgstr "做"
+
+#: .\templates\aboutus.html:10
+msgid ""
+"Hier stellen wir unser fleißiges und junges Team vor. Lernt uns bei unserer "
+"Reise kennen."
+msgstr "在这里我们介绍我们勤奋而年轻的团队。让我们在旅途中相识。"
+
+#: .\templates\base.html:9 .\templates\base.html:31 .\templates\base.html:107
+msgid "Home"
+msgstr "主页"
+
+#: .\templates\base.html:27
+msgid "Toggle navigation"
+msgstr "切换导航"
+
+#: .\templates\base.html:32 .\templates\base.html:108
+msgid "Features"
+msgstr "功能"
+
+#: .\templates\base.html:33 .\templates\base.html:115
+msgid "Über Uns"
+msgstr "关于我们"
+
+#: .\templates\base.html:34
+msgid "Einkaufsliste"
+msgstr "购物清单"
+
+#: .\templates\base.html:35 .\templates\base.html:123
+msgid "Impressum"
+msgstr "法律声明"
+
+#: .\templates\base.html:89
+msgid "login"
+msgstr "登录"
+
+#: .\templates\base.html:102
+msgid "organisiert, einfach, überall"
+msgstr "有序、简单、随处可用"
+
+#: .\templates\base.html:105
+msgid "Seiten"
+msgstr "页面"
+
+#: .\templates\base.html:109 .\templates\features.html:11
+#: .\templates\signup.html:14
+msgid "Registrieren"
+msgstr "注册"
+
+#: .\templates\base.html:113
+msgid "Die Firma"
+msgstr "公司"
+
+#: .\templates\base.html:116
+msgid "Kontakt"
+msgstr "联系"
+
+#: .\templates\base.html:117 .\templates\login.html:13
+msgid "Login"
+msgstr "登录"
+
+#: .\templates\base.html:121
+msgid "Rechtliches"
+msgstr "法律"
+
+#: .\templates\base.html:124
+msgid "AGB & Datenschutz"
+msgstr "服务条款和隐私政策"
+
+#: .\templates\base.html:125
+msgid "Cookies"
+msgstr "Cookies"
+
+#: .\templates\contacts.html:9
+msgid "Hast du noch"
+msgstr "你还有"
+
+#: .\templates\contacts.html:9
+msgid "Fragen"
+msgstr "问题"
+
+#: .\templates\contacts.html:10
+msgid ""
+"Schreib uns gerne eine Nachricht und wir werden uns zeitnah bei dir melden."
+msgstr "请随时给我们留言，我们会尽快回复您。"
+
+#: .\templates\contacts.html:18
+msgid "Name"
+msgstr "姓名"
+
+#: .\templates\contacts.html:21 .\templates\forgotten-password.html:16
+#: .\templates\login.html:19 .\templates\signup.html:19
+msgid "Email"
+msgstr "电子邮件"
+
+#: .\templates\contacts.html:24
+msgid "Nachricht"
+msgstr "信息"
+
+#: .\templates\contacts.html:28
+msgid "Absenden"
+msgstr "发送"
+
+#: .\templates\contacts.html:42 .\templates\index.html:323
+msgid "FAQ"
+msgstr "常见问题"
+
+#: .\templates\contacts.html:43
+msgid ""
+"Hier findest du Antworten auf häufig gestellte Fragen rund um AdLegio Market."
+msgstr "在这里，您可以找到关于 AdLegio Market 的常见问题的答案。"
+
+#: .\templates\contacts.html:52
+msgid "Wie kann ich eine Einkaufsliste teilen?"
+msgstr "我如何分享购物清单？"
+
+#: .\templates\contacts.html:57
+msgid ""
+"Um eine Einkaufsliste zu teilen, klicke auf 'Liste teilen' und sende den "
+"Link an Familie oder Freunde. Sie können die Liste in Echtzeit bearbeiten."
+msgstr "要分享购物清单，请点击“分享清单”，然后将链接发送给家人或朋友。他们可以实时编辑该清单。"
+
+#: .\templates\contacts.html:64
+msgid "Kann ich Artikel in Kategorien organisieren?"
+msgstr "我可以按类别组织项目吗？"
+
+#: .\templates\contacts.html:69
+msgid ""
+"Ja, du kannst deine Artikel in verschiedene Kategorien einteilen, wie z.B. "
+"Obst, Gemüse, Haushaltswaren, um den Überblick zu behalten."
+msgstr "是的，您可以将您的项目分为不同的类别，例如水果、蔬菜和家庭用品，以便保持条理。"
+
+#: .\templates\contacts.html:76
+msgid "Gibt es eine Erinnerungsfunktion für wichtige Einkäufe?"
+msgstr "是否有重要购买的提醒功能？"
+
+#: .\templates\contacts.html:81
+msgid ""
+"Ja, AdLegio Market bietet eine Erinnerungsfunktion, die dich an wichtige "
+"Einkäufe erinnert. So vergisst du keine wichtigen Artikel."
+msgstr "是的，AdLegio Market 提供提醒功能，提醒您重要的购物事项。这样您就不会忘记重要的项目。"
+
+#: .\templates\contacts.html:88
+msgid "Kann ich meine Einkaufsliste auch offline nutzen?"
+msgstr "我可以离线使用我的购物清单吗？"
+
+#: .\templates\contacts.html:93
+msgid ""
+"Ja, die Liste ist auch offline zugänglich. Änderungen werden synchronisiert, "
+"sobald du wieder online bist."
+msgstr "是的，该清单也可以离线访问。更改将在您重新上线时同步。"
+
+#: .\templates\einkaufsliste.html:9
+msgid "Hier Einkaufsliste"
+msgstr "这里是购物清单"
+
+#: .\templates\einkaufsliste.html:10
+msgid "Hier werden die Funktionen für die Einkaufsliste sein"
+msgstr "这里是购物清单的功能"
+
+#: .\templates\features.html:9
+msgid "Alles was dein Team braucht, an einem"
+msgstr "您团队所需的一切，尽在一个"
+
+#: .\templates\features.html:9
+msgid "Ort"
+msgstr "地方"
+
+#: .\templates\features.html:10
+msgid ""
+"Verwalte, plane und teile Aufgaben effizient mit unserer Plattform. Perfekt "
+"für Teams, die produktiver arbeiten möchten."
+msgstr "利用我们的平台高效管理、计划和共享任务。非常适合希望提高工作效率的团队。"
+
+#: .\templates\features.html:21
+msgid "Von"
+msgstr "来自"
+
+#: .\templates\features.html:21
+msgid "der besten Einkäufer weltweit genutzt"
+msgstr "全球最佳购物者使用"
+
+#: .\templates\features.html:35
+msgid "Funktionen, die den Einkauf"
+msgstr "使购物变得"
+
+#: .\templates\features.html:35
+msgid "einfacher"
+msgstr "更简单"
+
+#: .\templates\features.html:38
+msgid ""
+"Erleichtere dir das Einkaufen mit smarten Features, die dir helfen, alles "
+"auf deiner Liste im Blick zu behalten und Zeit zu sparen."
+msgstr "使用智能功能简化购物，帮助您保持清单上的所有项目，并节省时间。"
+
+#: .\templates\features.html:54
+msgid "Smarte Empfehlungen"
+msgstr "智能推荐"
+
+#: .\templates\features.html:55
+msgid ""
+"Erhalte personalisierte Vorschläge basierend auf deinen Einkäufen. Nie "
+"wieder etwas vergessen!"
+msgstr "根据您的购买获得个性化建议。再也不忘记任何东西！"
+
+#: .\templates\features.html:56 .\templates\features.html:83
+#: .\templates\features.html:158 .\templates\features.html:174
+#: .\templates\features.html:196 .\templates\features.html:212
+msgid "Erfahre mehr"
+msgstr "了解更多"
+
+#: .\templates\features.html:81
+msgid "Gemeinsame Einkaufslisten"
+msgstr "共享购物清单"
+
+#: .\templates\features.html:82
+msgid ""
+"Teile deine Listen mit Familie oder Freunden und behaltet gemeinsam den "
+"Überblick, wer was einkauft."
+msgstr "与家人或朋友共享清单，共同跟踪每个人的购物。"
+
+#: .\templates\features.html:106
+msgid "Schnelle Kategorisierung"
+msgstr "快速分类"
+
+#: .\templates\features.html:128
+msgid "Erinnerungen für deinen Einkauf"
+msgstr "购物提醒"
+
+#: .\templates\features.html:156
+msgid "Clever einkaufen – So behältst du den Überblick"
+msgstr "聪明购物 - 这样您就能保持条理"
+
+#: .\templates\features.html:157
+msgid ""
+"Lerne, wie du deine Einkäufe besser planst und deine Einkaufsliste optimal "
+"nutzt, um Zeit und Geld zu sparen."
+msgstr "学习如何更好地规划购物，优化使用购物清单，节省时间和金钱。"
+
+#: .\templates\features.html:172
+msgid "Sicher online einkaufen – Worauf du achten solltest"
+msgstr "安全在线购物 - 您应该注意什么"
+
+#: .\templates\features.html:173
+msgid ""
+"Schütze dich beim Online-Shopping vor Betrug und erfahre, welche "
+"Sicherheitstipps du beachten solltest."
+msgstr "在在线购物时保护自己免受欺诈，并了解您应注意哪些安全提示。"
+
+#: .\templates\features.html:194
+msgid "Nachhaltig einkaufen – So geht’s"
+msgstr "可持续购物 - 这样做"
+
+#: .\templates\features.html:195
+msgid ""
+"Erfahre wie du umweltfreundliche Produkte findest und beim Einkaufen einen "
+"Beitrag zum Umweltschutz leisten kannst."
+msgstr "了解如何找到环保产品，并在购物时为环境保护做出贡献。"
+
+#: .\templates\features.html:210
+msgid "Gemeinsame Einkaufslisten – So funktioniert’s"
+msgstr "共享购物清单 - 这样运作"
+
+#: .\templates\features.html:211
+msgid ""
+"Lerne, wie du Einkaufslisten mit anderen teilst und gemeinsam den Einkauf "
+"effizienter gestaltest."
+msgstr "学习如何与他人共享购物清单，并共同提高购物效率。"
+
+#: .\templates\forgotten-password.html:12
+msgid "Hast du dein"
+msgstr "您是否忘记了您的"
+
+#: .\templates\forgotten-password.html:12
+msgid "Passwort"
+msgstr "密码"
+
+#: .\templates\forgotten-password.html:12
+msgid "vergessen?"
+msgstr "忘记了吗？"
+
+#: .\templates\forgotten-password.html:13
+msgid ""
+"Hier kannst du deine Email-Adresse, die du bei der Registration angegeben "
+"hast, eingeben und bekommst einen Reset-Link zugeschickt."
+msgstr "在这里，您可以输入您注册时提供的电子邮件地址，我们将向您发送重置链接。"
+
+#: .\templates\forgotten-password.html:19
+msgid "Passwort zurücksetzen"
+msgstr "重置密码"
+
+#: .\templates\index.html:10
+msgid "Dein smarter Einkaufshelfer"
+msgstr "您的智能购物助手"
+
+#: .\templates\index.html:11
+msgid "organisiert - einfach - überall"
+msgstr "有序 - 简单 - 随处可用"
+
+#: .\templates\index.html:14 .\templates\index.html:200
+msgid "Jetzt registrieren"
+msgstr "立即注册"
+
+#: .\templates\index.html:40
+msgid "Smarte Einkaufsplanung"
+msgstr "智能购物规划"
+
+#: .\templates\index.html:41
+msgid ""
+"Plane deinen Einkauf effizienter mit personalisierten Vorschlägen und "
+"automatischen Kategorisierungen. Nie wieder den Überblick verlieren!"
+msgstr "通过个性化建议和自动分类，使您的购物更高效。再也不会失去控制！"
+
+#: .\templates\index.html:60
+msgid "Teile deine Liste"
+msgstr "分享你的清单"
+
+#: .\templates\index.html:61
+msgid ""
+"Erstelle gemeinsame Listen und teile sie mit deiner Familie oder Freunden. "
+"So bleibt jeder auf dem Laufenden, egal wer einkauft."
+msgstr "创建共享清单并与家人或朋友分享。这样，无论谁购物，大家都能保持同步。"
+
+#: .\templates\index.html:76
+msgid "Überall verfügbar"
+msgstr "随处可用"
+
+#: .\templates\index.html:77
+msgid ""
+"Synchronisiere deine Einkaufsliste über alle Geräte hinweg – sei es am "
+"Computer, Tablet oder Smartphone. Deine Liste ist immer up-to-date."
+msgstr "在所有设备上同步您的购物清单，无论是计算机、平板还是智能手机。您的清单始终是最新的。"
+
+#: .\templates\index.html:89
+msgid "Alles für deinen perfekten Einkauf"
+msgstr "为您完美购物的一切"
+
+#: .\templates\index.html:92
+msgid ""
+"Verwalte deine Einkäufe effizient und behalte immer den Überblick – egal, ob "
+"alleine oder im Team."
+msgstr "高效管理您的购物，并始终保持条理 - 无论是单独购物还是与团队一起。"
+
+#: .\templates\index.html:107
+msgid "Vorschläge"
+msgstr "建议"
+
+#: .\templates\index.html:109
+msgid "Erhalte Artikel basierend auf deinen Einkäufen."
+msgstr "根据您的购物获得商品。"
+
+#: .\templates\index.html:120
+msgid "Kategorien"
+msgstr "类别"
+
+#: .\templates\index.html:122
+msgid "Organisiere deine Listen nach Produktgruppen."
+msgstr "按产品组组织您的清单。"
+
+#: .\templates\index.html:131
+msgid "Erinnerungen"
+msgstr "提醒"
+
+#: .\templates\index.html:133
+msgid "Erhalte Benachrichtigungen für wichtige Einkäufe."
+msgstr "收到重要购物的通知。"
+
+#: .\templates\index.html:141
+msgid "Teilen"
+msgstr "分享"
+
+#: .\templates\index.html:143
+msgid "Teile Listen mit Familie und Freunden."
+msgstr "与家人和朋友共享清单。"
+
+#: .\templates\index.html:162
+msgid "Mach deinen Einkauf"
+msgstr "让你的购物"
+
+#: .\templates\index.html:162
+msgid "effizienter"
+msgstr "更高效"
+
+#: .\templates\index.html:163
+msgid ""
+"Mit AdLegio Market hast du alle Tools, um deinen Einkauf optimal zu planen. "
+"Von personalisierten Empfehlungen bis hin zu gemeinsamen Listen – alles, was "
+"du brauchst, in einer übersichtlichen App."
+msgstr "使用 AdLegio Market，您拥有所有工具来优化您的购物规划。从个性化推荐到共享清单 - 您需要的一切都在一个清晰的应用程序中。"
+
+#: .\templates\index.html:166
+msgid "Funktionen"
+msgstr "功能"
+
+#: .\templates\index.html:167
+msgid "Entdecke smarte Features für deinen Einkauf."
+msgstr "探索智能功能来提升您的购物体验。"
+
+#: .\templates\index.html:171
+msgid "Vorlagen"
+msgstr "模板"
+
+#: .\templates\index.html:172
+msgid "Nutze vorgefertigte oder eigene Listen."
+msgstr "使用预制或自定义清单。"
+
+#: .\templates\index.html:176
+msgid "Nutzer"
+msgstr "用户"
+
+#: .\templates\index.html:177
+msgid "Schließe dich unserer wachsenden Community an."
+msgstr "加入我们不断壮大的社区。"
+
+#: .\templates\index.html:181
+msgid "Stunden gespart"
+msgstr "节省的小时"
+
+#: .\templates\index.html:182
+msgid "Spare Zeit mit optimaler Einkaufsplanung."
+msgstr "通过优化购物规划节省时间。"
+
+#: .\templates\index.html:198
+msgid "Bist du bereit, nie wieder die Milch zu vergessen?"
+msgstr "您准备好不再忘记牛奶了吗？"
+
+#: .\templates\index.html:199
+msgid ""
+"Schließe dich uns an und erlebe die Macht einer organisierten Einkaufsliste. "
+"Registriere dich jetzt und lass den Einkaufsstress hinter dir!"
+msgstr "加入我们，体验组织购物清单的力量。立即注册，摆脱购物压力！"
+
+#: .\templates\index.html:213
+msgid "Finde den perfekten"
+msgstr "找到完美的"
+
+#: .\templates\index.html:213
+msgid "Plan"
+msgstr "计划"
+
+#: .\templates\index.html:213
+msgid "für dich"
+msgstr "适合你"
+
+#: .\templates\index.html:214
+msgid ""
+"Wähle den Plan, der am besten zu deinem Einkaufsverhalten passt. Starte "
+"kostenlos oder entdecke mehr Funktionen mit unseren Premium-Plänen."
+msgstr "选择最适合您购物习惯的计划。免费开始或通过我们的高级计划探索更多功能。"
+
+#: .\templates\index.html:222
+msgid "Basic"
+msgstr "基础"
+
+#: .\templates\index.html:223
+msgid "Perfekt für den gelegentlichen Einkäufer."
+msgstr "完美适合偶尔购物的人。"
+
+#: .\templates\index.html:224
+msgid "Kostenlos"
+msgstr "免费"
+
+#: .\templates\index.html:230
+msgid "Erstelle und teile eine Einkaufsliste"
+msgstr "创建并分享购物清单"
+
+#: .\templates\index.html:235
+msgid "Kategorisiere deine Artikel"
+msgstr "将您的商品分类"
+
+#: .\templates\index.html:240
+msgid "Keine Werbung"
+msgstr "无广告"
+
+#: .\templates\index.html:249
+msgid "Most Popular"
+msgstr "最受欢迎"
+
+#: .\templates\index.html:251
+msgid "Pro"
+msgstr "专业版"
+
+#: .\templates\index.html:252
+msgid "Für regelmäßige Einkäufer, die mehr Kontrolle wollen."
+msgstr "适合希望获得更多控制的常规购物者。"
+
+#: .\templates\index.html:259
+msgid "Alles aus dem Basic-Plan"
+msgstr "基础计划中的所有内容"
+
+#: .\templates\index.html:264
+msgid "Unbegrenzte Listen und Kategorien"
+msgstr "无限的清单和类别"
+
+#: .\templates\index.html:269
+msgid "Team-Funktionen für gemeinsames Einkaufen"
+msgstr "团队功能以便于协作购物"
+
+#: .\templates\index.html:274
+msgid "Premium-Support"
+msgstr "高级支持"
+
+#: .\templates\index.html:284
+msgid "Enterprise"
+msgstr "企业版"
+
+#: .\templates\index.html:285
+msgid "Ideal für Familien und kleine Teams."
+msgstr "非常适合家庭和小团队。"
+
+#: .\templates\index.html:292
+msgid "Alles aus dem Pro-Plan"
+msgstr "专业版中的所有内容"
+
+#: .\templates\index.html:297
+msgid "Erstelle Gruppenlisten für mehrere Nutzer"
+msgstr "为多个用户创建小组清单"
+
+#: .\templates\index.html:301
+msgid "Intelligente Einkaufserinnerungen"
+msgstr "智能购物提醒"
+
+#: .\templates\index.html:305
+msgid "Priorisierungen und Budget-Tracking"
+msgstr "优先级和预算跟踪"
+
+#: .\templates\index.html:309
+msgid "Erweiterter Support"
+msgstr "扩展支持"
+
+#: .\templates\index.html:324
+msgid ""
+"Hier findest du Antworten auf die häufigsten Fragen rund um AdLegio Market. "
+"Solltest du weitere Fragen haben, zögere nicht, uns zu kontaktieren!"
+msgstr "在这里，您可以找到关于 AdLegio Market 的常见问题的答案。如果您有其他问题，请随时与我们联系！"
+
+#: .\templates\index.html:332
+msgid "Wie funktioniert AdLegio Market?"
+msgstr "AdLegio Market 如何工作？"
+
+#: .\templates\index.html:335
+msgid ""
+"AdLegio Market hilft dir, deine Einkaufsliste zu erstellen, zu organisieren "
+"und zu teilen. Du kannst Artikel hinzufügen, Kategorien erstellen und deine "
+"Liste mit Familie und Freunden synchronisieren."
+msgstr "AdLegio Market 帮助您创建、组织和共享购物清单。您可以添加商品、创建类别，并与家人和朋友同步您的清单。"
+
+#: .\templates\index.html:340
+msgid "Ist die Nutzung von AdLegio Market kostenlos?"
+msgstr "使用 AdLegio Market 是免费的吗？"
+
+#: .\templates\index.html:343
+msgid ""
+"Ja, unser Basisplan ist völlig kostenlos. Du kannst jedoch auf unsere Pro- "
+"und Enterprise-Pläne upgraden, um zusätzliche Funktionen wie erweiterte "
+"Listen und Team-Shopping zu nutzen."
+msgstr "是的，我们的基础计划完全免费。但您可以升级到我们的专业版和企业版，以获得额外功能，例如扩展清单和团队购物。"
+
+#: .\templates\index.html:348
+msgid "Kann ich meine Listen mit anderen teilen?"
+msgstr "我可以与他人共享我的清单吗？"
+
+#: .\templates\index.html:351
+msgid ""
+"Ja, du kannst deine Einkaufsliste mit anderen teilen und in Echtzeit "
+"zusammenarbeiten. Dies ist ideal für Familien oder Gruppen, die gemeinsam "
+"einkaufen möchten."
+msgstr "是的，您可以与他人共享购物清单并实时合作。这非常适合希望共同购物的家庭或团体。"
+
+#: .\templates\index.html:365
+msgid "Unsicher, welcher Plan zu dir passt?"
+msgstr "不确定哪个计划适合您吗？"
+
+#: .\templates\index.html:366
+msgid "Kontaktiere uns wenn du noch Fragen hast."
+msgstr "如果您还有其他问题，请与我们联系。"
+
+#: .\templates\index.html:368
+msgid "Kontaktieren"
+msgstr "联系"
+
+#: .\templates\login.html:22 .\templates\signup.html:22
+msgid "Password"
+msgstr "密码"
+
+#: .\templates\login.html:25
+msgid "Log in"
+msgstr "登录"
+
+#: .\templates\login.html:29
+msgid "Passwort vergessen?"
+msgstr "忘记密码？"
+
+#: .\templates\login.html:32
+msgid "Noch kein Konto? Hier registrieren"
+msgstr "还没有账户？在这里注册"
+
+#: .\templates\signup.html:25
+msgid "Repeat Password"
+msgstr "重复密码"
+
+#: .\templates\signup.html:28
+msgid "Account erstellen"
+msgstr "创建账户"
+
+#: .\templates\signup.html:32
+msgid "Hast du schon einen Account?"
+msgstr "您已经有账户吗？"
+
+#: .\templates\signup.html:34
+msgid "Einloggen"
+msgstr "登录"

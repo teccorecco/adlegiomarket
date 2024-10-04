@@ -28,3 +28,33 @@ p {
   }
 }
 
+@media (min-width: 300px) and (max-width: 768px) {
+  #loginPic {
+    height: 193.984px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  #signupPic {
+    height: 161.031px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  #forgotPic {
+    height: 190px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  #notfoundPic {
+    height: 213.188px;
+  }
+}
+
+@media (min-width: 768px) {
+  #notfoundPic {
+    height: 265.75px;
+  }
+}
+

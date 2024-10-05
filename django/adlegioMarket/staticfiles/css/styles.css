@@ -1,3 +1,6 @@
+/* ========== General Styles ========== */
+
+/* Underline effect for headers */
 .underline:after {
   content: "";
   position: absolute;
@@ -10,19 +13,179 @@
   z-index: -1;
 }
 
-h1 {
+/* ========== Mobile Navbar Adjustments ========== */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
+/* ========== Modal Styles ========== */
+/* Smaller modals on mobile */
+.small-modal {
+  max-width: 300px;
+  margin: auto;
+}
+
+@media (max-width: 576px) {
+  .small-modal {
+      max-width: 90%;
+  }
+}
+
+.modal-content {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.modal-body i {
+  font-size: 2.5rem;
+}
+
+.modal-body p {
+  font-size: 1.2rem;
+}
+
+/* Centering modals */
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.modal-backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== Accordion and Button Styles ========== */
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: black;
+}
+
+/* ========== List Item Styles ========== */
+.custom-list-item {
+  border: none;
+  padding: 10px 0;
+}
+
+/* Adjust item row to have more space between items and checkbox */
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure there's spacing between items */
+  margin-bottom: 15px; /* Space between each list item */
+}
+
+.item-quantity {
+  font-weight: bold;
+  margin-right: 15px; /* Slightly larger space between quantity and name */
+}
+
+.item-name {
+  margin-right: 30px; /* Adds more space between name and delete button */
+  width: auto; /* Prevents the name from being too wide */
+  border: none;
+  border-bottom: 1px solid #ccc; /* Underline style */
+}
+
+.item-name:focus {
+  outline: none;
+  border-bottom: 1px solid #E63946; /* Change border color when focused */
+}
+
+
+.item-input {
+  border: none; /* Remove all borders */
+  width: 100%; /* Make it stretch */
+  padding: 5px 0; /* Add some padding for space */
+}
+
+.item-input:focus {
+  border-bottom: 1px solid #E63946; /* Only the bottom border should change on focus */
+  outline: none; /* Remove the outline when focused */
+}
+
+.list-group-item {
+  border: none;
+  padding-left: 20px; /* Add padding to move items right */
+  padding-right: 20px;
+}
+
+/* ========== Button Styles ========== */
+.btn {
+  border-radius: 8px;
+}
+
+/* ========== Copy Link Section Styles ========== */
+.custom-link-input {
+  border-radius: 8px 0 0 8px;
+  background-color: #D5E1F1;
+  color: #1D3557;
+  border: none;
+  padding: 10px 16px;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.custom-copy-btn {
+  border-radius: 0 8px 8px 0;
+  border: none;
+  padding: 10px 16px;
+  background-color: #1D3557;
+  color: #fff;
+}
+
+.custom-copy-btn:hover {
+  background-color: #E63946;
+  color: white;
+}
+
+
+/* ========== Checkbox Styles with Custom Images ========== */
+.item-checkbox {
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border: none; /* No border needed as we're using images */
+  border-radius: 50%; /* Keep it round */
+  margin-right: 20px;
+  display: inline-block;
+  background-image: url('/static/img/checkboxFalse.png'); /* Default unchecked image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.item-checkbox:checked {
+  background-image: url('/static/img/checkboxTrue.png'); /* Checked image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========== Mobile Responsive Typography Adjustments ========== */
 @media (min-width: 300px) and (max-width: 500px) {
   #uberschrift {
     font-size: 24.78px;
   }
-}
-
-p {
-}
-
-@media (min-width: 300px) and (max-width: 500px) {
   #unterUeberschrift {
     font-size: 19px;
   }
@@ -32,21 +195,12 @@ p {
   #loginPic {
     height: 193.984px;
   }
-}
-
-@media (min-width: 300px) and (max-width: 768px) {
   #signupPic {
     height: 161.031px;
   }
-}
-
-@media (min-width: 300px) and (max-width: 768px) {
   #forgotPic {
     height: 190px;
   }
-}
-
-@media (min-width: 300px) and (max-width: 768px) {
   #notfoundPic {
     height: 213.188px;
   }
@@ -55,6 +209,22 @@ p {
 @media (min-width: 768px) {
   #notfoundPic {
     height: 265.75px;
+}}
+
+/* ========== Align checkboxes and content ========== */
+/* .d-flex.align-items-center {
+  margin-left: 20px;
+} */
+
+/* Ensure that the image and text remain side by side */
+@media (min-width: 768px) {
+  .row.align-items-center {
+    display: flex;
+    align-items: center;
   }
 }
 
+img.fit-cover {
+  object-fit: cover; /* Ensure the image fits well */
+  max-width: 100%; /* Ensure image scales correctly */
+}

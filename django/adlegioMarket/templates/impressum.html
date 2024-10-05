@@ -5,45 +5,70 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="display-6 fw-bold mb-4">&nbsp;<span class="underline">Impressum</span></h2>
-                    <p class="text-muted">Hier wird das Impressum sein</p>
+                    <h2 class="display-6 fw-bold mb-4">&nbsp;<span class="underline">{% trans "Impressum" %}</span></h2>
+                    <p class="text-muted">{% trans "Nachfolgend finden Sie die rechtlichen Angaben zu diesem studentischen Projekt." %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p>
+                        <strong>{% trans "Angaben zum Anbieter" %}</strong><br>
+                        {% trans "Diese Website ist Teil eines studentischen Projekts und verfolgt keine kommerziellen Interessen. Das Projekt dient ausschließlich dem Zweck der Präsentation und wird im Rahmen einer Unterrichtseinheit vorgestellt." %}
+                    </p>
+                    <p>
+                        <strong>{% trans "Kontakt" %}:</strong><br>
+                        Iliya Borisov<br>
+                        E-Mail: <a href="mailto:borisov@iliya.site">info@adlegio.de</a>
+                    </p>
+                    <p>
+                        <strong>{% trans "Haftung für Inhalte" %}</strong><br>
+                        {% trans "Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich." %}
+                    </p>
+                    <p>
+                        <strong>{% trans "Haftung für Links" %}</strong><br>
+                        {% trans "Diese Seite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich." %}
+                    </p>
+                    <p>
+                        <strong>{% trans "Urheberrecht" %}</strong><br>
+                        {% trans "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers." %}
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    
     <section class="py-4 py-xl-5 mb-5">
         <div class="container">
             <div class="row mb-2">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">FAQ<br></span></h2>
-                    <p class="text-muted mb-5">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+                    <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">{% trans "FAQ" %}<br></span></h2>
+                    <p class="text-muted mb-5">{% trans "Antworten auf häufig gestellte Fragen zu unserem Projekt." %}</p>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col-md-8 mx-auto">
                     <div class="accordion text-muted" role="tablist" id="accordion-1">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true" aria-controls="accordion-1 .item-1">Aenean arcu euismod aliquam, volutpat consequat?</button></h2>
+                            <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true" aria-controls="accordion-1 .item-1">{% trans "Was ist der Zweck dieser Anwendung?" %}</button></h2>
                             <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
-                                    <p>Maecenas diam volutpat, erat quis enim cras lobortis vivamus donec tempor. Congue ultrices donec turpis vivamus. Laoreet aenean metus, mi nunc massa feugiat duis. Pharetra erat consequat purus curae quisque, etiam accumsan class.</p>
-                                    <p class="mb-0">Commodo rutrum quisque curabitur habitasse, suspendisse etiam.</p>
+                                    <p>{% trans "Diese Django-Anwendung ist ein Projekt, das während des Unterrichts vorgestellt wird. Sie soll den Nutzern helfen, Einkaufslisten zu erstellen und diese mit anderen zu teilen." %}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">Lorem quam erat placerat mollis, rhoncus senectus?</button></h2>
+                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">{% trans "Wie funktioniert das Teilen der Einkaufsliste?" %}</button></h2>
                             <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
-                                    <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                    <p class="mb-0">{% trans "Nutzer können eine Einkaufsliste erstellen und diese über einen zufällig generierten Link mit anderen teilen. Der Link führt direkt zur erstellten Liste, die andere Nutzer einsehen und bearbeiten können, je nach Einstellung." %}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">Iaculis accumsan id, facilisis proin ipsum velit neque?</button></h2>
+                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">{% trans "Welche Funktionen sind geplant?" %}</button></h2>
                             <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
-                                    <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                    <p class="mb-0">{% trans "Es sind mehrere Funktionen in Planung, darunter das automatische Kategorisieren von Produkten (z.B. Äpfel als 'Obst') sowie die Möglichkeit, Einkaufslisten mit mehreren Nutzern zu verwalten." %}</p>
                                 </div>
                             </div>
                         </div>

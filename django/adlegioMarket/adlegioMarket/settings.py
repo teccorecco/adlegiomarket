@@ -4,10 +4,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-from decouple import config
-
 # Lade den SECRET_KEY aus der .env-Datei
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'rfpkkc*!p1aaq)(1(xuhcvi=i1dzxuze4x_*fm%vrp!&cgvoqv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

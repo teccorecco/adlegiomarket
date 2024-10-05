@@ -23,10 +23,10 @@
                     <button class="btn btn-primary shadow" id="login-button" style="color: white;border-radius: 8px;">{% trans "Log in" %}</button>
                 </div>
                 <p class="text-muted">
-                    <a data-aos="fade" data-aos-delay="400" href="{% url 'forgotten_password' %}">{% trans "Passwort vergessen?" %}</a>
+                    <a href="{% url 'forgotten_password' %}">{% trans "Passwort vergessen?" %}</a>
                 </p>
                 <p class="text-muted">
-                    <a data-aos="fade" data-aos-delay="400" href="{% url 'signup' %}">{% trans "Noch kein Konto? Hier registrieren" %}</a>
+                    <a href="{% url 'signup' %}">{% trans "Noch kein Konto? Hier registrieren" %}</a>
                 </p>
             </div>
         </div>

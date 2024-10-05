@@ -1,21 +1,29 @@
 {% extends "base.html" %}
 {% load static i18n %}
+{% load custom_filters %}
 {% block content %}
 
-<section class="py-5 mt-5">
+<section class="py-3 mt-5">
     <div class="container py-4 py-xl-5">
-        <div class="row mb-5">
+        <div class="row mb-3">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2 class="display-6 fw-bold mb-4">{% trans "Hier Einkaufsliste" %}</h2>
-                <p class="text-muted">{% trans "Hier werden die Funktionen für die Einkaufsliste sein" %}</p>
+                <h2 class="display-6 fw-bold mb-3">{% trans "Deine Einkaufsliste" %}</h2>
             </div>
         </div>
+
+        {% comment %} <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <label for="listName" class="fw-bold">{% trans "Name der Einkaufsliste" %}</label>
+                <input type="text" id="listName" name="list_name" class="form-control" value="{{ shopping_list_name }}" placeholder="Z. B. Wochenendeinkauf">
+            </div>
+        </div> {% endcomment %}
 
         <div class="row mb-4">
             <div class="col-md-8 mx-auto">
                 <form method="post" class="d-flex">
                     {% csrf_token %}
-                    <input type="text" name="item_name" placeholder="{% trans 'Artikelname' %}" class="form-control me-2" required>
+                    <input type="text" name="item_name" placeholder="{% trans 'Name' %}" class="form-control me-2" required>
+                    <input type="number" name="quantity" placeholder="{% trans 'Menge' %}" class="form-control me-2" required>
                     <button type="submit" class="btn btn-primary" style="color: white; border-radius: 8px;">{% trans "Hinzufügen" %}</button>
                 </form>
             </div>
@@ -23,83 +31,80 @@
 
         <!-- Random Link Section -->
         <div class="row mb-4">
-            <div class="col-md-8 mx-auto">
-                <h4 class="fw-bold">{% trans "Teilen" %}</h4>
-                <p class="text-muted">{% trans "Teile diesen Link mit deinen Freunden, um die Liste zu bearbeiten:" %}</p>
-                <input type="text" class="form-control" value="{{ request.build_absolute_uri }}{{ short_link }}" readonly>
-                <button class="btn btn-secondary mt-2" onclick="copyToClipboard()">{% trans "Link kopieren" %}</button>
+            <div class="col-md-8 mx-auto d-flex">
+                <!-- Display the shorter link in the input with background and rounded corners -->
+                <input type="text" id="shoppingListLink" class="form-control me-2 custom-link-input" value="adlegio.de/l/{{ short_link }}" readonly>
+                <button class="btn btn-secondary custom-copy-btn" onclick="copyToClipboard()">
+                    <i class="bi bi-clipboard"></i>
+                </button>
             </div>
         </div>
-        
 
-        <!-- Categories Section -->
-        <div class="row mb-4">
-            <div class="col-md-8 mx-auto">
-                <h4 class="fw-bold">{% trans "Kategorien" %}</h4>
-                <div class="list-group">
-                    {% for category in items.values|dictsort:"category" %}
-                        <button class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#category-{{ category.category }}">
-                            {{ category.category }} <i class="bi bi-chevron-down"></i>
-                        </button>
-                        <div id="category-{{ category.category }}" class="collapse show"> <!-- Show by default -->
-                            <ul class="list-group" style="border: none;">
-                                {% for item in items %}
-                                    {% if item.category == category.category %}
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            {{ item.name }}
-                                            <button class="btn btn-danger btn-sm" onclick="deleteItem({{ item.id }})">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </li>
-                                    {% endif %}
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endfor %}
+            <!-- Kategorien Accordion -->
+            <div class="row mb-4">
+                <div class="col-md-8 mx-auto">
+                    <div class="accordion text-muted" id="shoppingListAccordion">
+                        {% if items %}
+                            <!-- Iterate through categories and items -->
+                            {% for category, items_in_category in items|group_by_category %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" style="color: black;">
+                                        <button class="accordion-button" type="button" style="color: black;">
+                                            {{ category }}
+                                        </button>
+                                    </h2>
+                                    <div class="accordion-collapse collapse show">
+                                        <ul class="list-group">
+                                            {% for item in items_in_category %}
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <input type="checkbox" class="item-checkbox" data-id="{{ item.id }}" {% if item.checked %}checked{% endif %}>
+                                                <span class="item-quantity">{{ item.quantity }}</span>
+                                                <input type="text" class="item-name" value="{{ item.name }}" readonly>
+                                                <button class="btn btn-danger btn-sm" onclick="deleteItem({{ item.id }})">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>                                        
+                                    </div>                                      
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>{% trans "Keine Artikel in der Einkaufsliste." %}</p>
+                        {% endif %}
+                    </div>                    
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    function deleteItem(itemId) {
-        if (confirm("Möchtest du diesen Artikel wirklich löschen?")) {
-            fetch(`/einkaufsliste/delete/${itemId}/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': getCookie('csrftoken'),  // Funktion um CSRF-Token zu erhalten
-                },
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Wenn erfolgreich, die Seite aktualisieren
-                    location.reload(); // Seite neu laden, um den Artikel zu entfernen
-                } else {
-                    alert("Fehler beim Löschen des Artikels.");
-                }
-            });
-        }
-    }
-    
-    // Funktion um den CSRF-Token zu bekommen
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim();
-                // Überprüfe, ob das Cookie den gesuchten Namen hat
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-    }
-    
-</script>
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4" style="border-radius: 8px;">
+        <div class="modal-body text-center">
+          <p class="fs-5 mb-4" id="deleteModalLabel">{% trans "Wirklich löschen?" %}</p>
+          <button type="button" class="btn btn-secondary me-2" style="border-radius: 8px;" data-bs-dismiss="modal">{% trans "Abbrechen" %}</button>
+          <button type="button" class="btn btn-danger" style="border-radius: 8px;" id="confirmDeleteButton">{% trans "Löschen" %}</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal für "Link kopiert" -->
+<div class="modal fade" id="linkCopiedModal" tabindex="-1" aria-labelledby="linkCopiedLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered small-modal">
+        <div class="modal-content" style="border-radius: 8px; padding: 20px; text-align: center;">
+            <div class="modal-body">
+                <i class="bi bi-check-circle-fill" style="color: green; font-size: 2rem;"></i>
+                <p style="font-size: 1.2rem; margin-top: 10px;">Link kopiert!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript einbinden -->
+<script src="{% static 'js/einkaufsliste.js' %}"></script>
 
 {% endblock content %}

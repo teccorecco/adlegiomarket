@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 15:27+0200\n"
+"POT-Creation-Date: 2024-10-05 21:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,68 +31,69 @@ msgid ""
 "Reise kennen."
 msgstr ""
 
-#: .\templates\base.html:9 .\templates\base.html:31 .\templates\base.html:107
+#: .\templates\base.html:9 .\templates\base.html:36 .\templates\base.html:136
 msgid "Home"
 msgstr ""
 
-#: .\templates\base.html:27
+#: .\templates\base.html:29
 msgid "Toggle navigation"
 msgstr ""
 
-#: .\templates\base.html:32 .\templates\base.html:108
+#: .\templates\base.html:41 .\templates\base.html:137
 msgid "Features"
 msgstr ""
 
-#: .\templates\base.html:33 .\templates\base.html:115
+#: .\templates\base.html:46 .\templates\base.html:144
 msgid "Über Uns"
 msgstr ""
 
-#: .\templates\base.html:34
+#: .\templates\base.html:51
 msgid "Einkaufsliste"
 msgstr ""
 
-#: .\templates\base.html:35 .\templates\base.html:123
+#: .\templates\base.html:56 .\templates\base.html:152
+#: .\templates\impressum.html:8
 msgid "Impressum"
 msgstr ""
 
-#: .\templates\base.html:89
+#: .\templates\base.html:113
 msgid "login"
 msgstr ""
 
-#: .\templates\base.html:102
+#: .\templates\base.html:131
 msgid "organisiert, einfach, überall"
 msgstr ""
 
-#: .\templates\base.html:105
+#: .\templates\base.html:134
 msgid "Seiten"
 msgstr ""
 
-#: .\templates\base.html:109 .\templates\features.html:11
+#: .\templates\base.html:138 .\templates\features.html:11
 #: .\templates\signup.html:14
 msgid "Registrieren"
 msgstr ""
 
-#: .\templates\base.html:113
+#: .\templates\base.html:142
 msgid "Die Firma"
 msgstr ""
 
-#: .\templates\base.html:116
+#: .\templates\base.html:145 .\templates\impressum.html:19
 msgid "Kontakt"
 msgstr ""
 
-#: .\templates\base.html:117 .\templates\login.html:13
+#: .\templates\base.html:146 .\templates\login.html:13
 msgid "Login"
 msgstr ""
 
-#: .\templates\base.html:121
+#: .\templates\base.html:150
 msgid "Rechtliches"
 msgstr ""
 
-#: .\templates\base.html:124
+#: .\templates\base.html:153
 msgid "AGB & Datenschutz"
 msgstr ""
 
-#: .\templates\base.html:125
+#: .\templates\base.html:154
 msgid "Cookies"
 msgstr ""
 
@@ -109,12 +110,12 @@ msgid ""
 "Schreib uns gerne eine Nachricht und wir werden uns zeitnah bei dir melden."
 msgstr ""
 
-#: .\templates\contacts.html:18
+#: .\templates\contacts.html:18 .\templates\einkaufsliste.html:25
 msgid "Name"
 msgstr ""
 
 #: .\templates\contacts.html:21 .\templates\forgotten-password.html:16
-#: .\templates\login.html:19 .\templates\signup.html:19
+#: .\templates\login.html:17 .\templates\signup.html:18
 msgid "Email"
 msgstr ""
 
@@ -126,7 +127,8 @@ msgstr ""
 msgid "Absenden"
 msgstr ""
 
-#: .\templates\contacts.html:42 .\templates\index.html:323
+#: .\templates\contacts.html:42 .\templates\impressum.html:44
+#: .\templates\index.html:323
 msgid "FAQ"
 msgstr ""
 
@@ -175,12 +177,36 @@ msgid ""
 "sobald du wieder online bist."
 msgstr ""
 
-#: .\templates\einkaufsliste.html:9
-msgid "Hier Einkaufsliste"
+#: .\templates\einkaufsliste.html:10
+msgid "Deine Einkaufsliste"
 msgstr ""
 
-#: .\templates\einkaufsliste.html:10
-msgid "Hier werden die Funktionen für die Einkaufsliste sein"
+#: .\templates\einkaufsliste.html:16
+msgid "Name der Einkaufsliste"
+msgstr ""
+
+#: .\templates\einkaufsliste.html:26
+msgid "Menge"
+msgstr ""
+
+#: .\templates\einkaufsliste.html:27
+msgid "Hinzufügen"
+msgstr ""
+
+#: .\templates\einkaufsliste.html:73
+msgid "Keine Artikel in der Einkaufsliste."
+msgstr ""
+
+#: .\templates\einkaufsliste.html:87
+msgid "Wirklich löschen?"
+msgstr ""
+
+#: .\templates\einkaufsliste.html:88
+msgid "Abbrechen"
+msgstr ""
+
+#: .\templates\einkaufsliste.html:89
+msgid "Löschen"
 msgstr ""
 
 #: .\templates\features.html:9
@@ -313,6 +339,97 @@ msgstr ""
 
 #: .\templates\forgotten-password.html:19
 msgid "Passwort zurücksetzen"
+msgstr ""
+
+#: .\templates\impressum.html:9
+msgid ""
+"Nachfolgend finden Sie die rechtlichen Angaben zu diesem studentischen "
+"Projekt."
+msgstr ""
+
+#: .\templates\impressum.html:15
+msgid "Angaben zum Anbieter"
+msgstr ""
+
+#: .\templates\impressum.html:16
+msgid ""
+"Diese Website ist Teil eines studentischen Projekts und verfolgt keine "
+"kommerziellen Interessen. Das Projekt dient ausschließlich dem Zweck der "
+"Präsentation und wird im Rahmen einer Unterrichtseinheit vorgestellt."
+msgstr ""
+
+#: .\templates\impressum.html:24
+msgid "Haftung für Inhalte"
+msgstr ""
+
+#: .\templates\impressum.html:25
+msgid ""
+"Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die "
+"Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch "
+"keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf "
+"diesen Seiten nach den allgemeinen Gesetzen verantwortlich."
+msgstr ""
+
+#: .\templates\impressum.html:28
+msgid "Haftung für Links"
+msgstr ""
+
+#: .\templates\impressum.html:29
+msgid ""
+"Diese Seite enthält Links zu externen Webseiten Dritter, auf deren Inhalte "
+"wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch "
+"keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der "
+"jeweilige Anbieter oder Betreiber der Seiten verantwortlich."
+msgstr ""
+
+#: .\templates\impressum.html:32
+msgid "Urheberrecht"
+msgstr ""
+
+#: .\templates\impressum.html:33
+msgid ""
+"Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten "
+"unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, "
+"Verbreitung und jede Art der Verwertung außerhalb der Grenzen des "
+"Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors "
+"bzw. Erstellers."
+msgstr ""
+
+#: .\templates\impressum.html:45
+msgid "Antworten auf häufig gestellte Fragen zu unserem Projekt."
+msgstr ""
+
+#: .\templates\impressum.html:52
+msgid "Was ist der Zweck dieser Anwendung?"
+msgstr ""
+
+#: .\templates\impressum.html:55
+msgid ""
+"Diese Django-Anwendung ist ein Projekt, das während des Unterrichts "
+"vorgestellt wird. Sie soll den Nutzern helfen, Einkaufslisten zu erstellen "
+"und diese mit anderen zu teilen."
+msgstr ""
+
+#: .\templates\impressum.html:60
+msgid "Wie funktioniert das Teilen der Einkaufsliste?"
+msgstr ""
+
+#: .\templates\impressum.html:63
+msgid ""
+"Nutzer können eine Einkaufsliste erstellen und diese über einen zufällig "
+"generierten Link mit anderen teilen. Der Link führt direkt zur erstellten "
+"Liste, die andere Nutzer einsehen und bearbeiten können, je nach Einstellung."
+msgstr ""
+
+#: .\templates\impressum.html:68
+msgid "Welche Funktionen sind geplant?"
+msgstr ""
+
+#: .\templates\impressum.html:71
+msgid ""
+"Es sind mehrere Funktionen in Planung, darunter das automatische "
+"Kategorisieren von Produkten (z.B. Äpfel als 'Obst') sowie die Möglichkeit, "
+"Einkaufslisten mit mehreren Nutzern zu verwalten."
 msgstr ""
 
 #: .\templates\index.html:10
@@ -605,34 +722,34 @@ msgstr ""
 msgid "Kontaktieren"
 msgstr ""
 
-#: .\templates\login.html:22 .\templates\signup.html:22
+#: .\templates\login.html:20 .\templates\signup.html:21
 msgid "Password"
 msgstr ""
 
-#: .\templates\login.html:25
+#: .\templates\login.html:23
 msgid "Log in"
 msgstr ""
 
-#: .\templates\login.html:29
+#: .\templates\login.html:26
 msgid "Passwort vergessen?"
 msgstr ""
 
-#: .\templates\login.html:32
+#: .\templates\login.html:29
 msgid "Noch kein Konto? Hier registrieren"
 msgstr ""
 
-#: .\templates\signup.html:25
+#: .\templates\signup.html:24
 msgid "Repeat Password"
 msgstr ""
 
-#: .\templates\signup.html:28
+#: .\templates\signup.html:27
 msgid "Account erstellen"
 msgstr ""
 
-#: .\templates\signup.html:32
+#: .\templates\signup.html:30
 msgid "Hast du schon einen Account?"
 msgstr ""
 
-#: .\templates\signup.html:34
+#: .\templates\signup.html:32
 msgid "Einloggen"
 msgstr ""

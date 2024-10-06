@@ -6,12 +6,12 @@ from django.utils import timezone
 from datetime import timedelta
 from .models import ShoppingItem, ShoppingList
 from django.http import JsonResponse
-import re
+import json
 
 # Generate a short link using a hash
 def generate_short_link():
     random_uuid = str(uuid.uuid4())
-    return hashlib.md5(random_uuid.encode()).hexdigest()[:6]  # Kürzerer Hash (6 Zeichen)
+    return hashlib.md5(random_uuid.encode()).hexdigest()[:6]  
 
 def einkaufsliste_view(request, short_link):
     shopping_list = ShoppingList.objects.get(short_link=short_link)
@@ -64,10 +64,8 @@ def einkaufsliste_view(request, short_link):
     
 # Create a new empty shopping list and redirect
 def default_einkaufsliste_view(request):
-    new_list = ShoppingList.objects.create(short_link=get_random_string(8))
+    new_list = ShoppingList.objects.create(short_link=get_random_string(6))
     return redirect('einkaufsliste', short_link=new_list.short_link)
-
-import re
 
 def categorize_item(item_name):
     category_keywords = {
@@ -125,12 +123,51 @@ def delete_expired_lists():
     expiry_time = timezone.now() - timedelta(hours=30)
     ShoppingList.objects.filter(created_at__lt=expiry_time).delete()
 
-
 def toggle_item_checked(request, item_id):
+    """Update item checked status."""
     if request.method == 'POST':
-        item = ShoppingItem.objects.get(id=item_id)
+        item = get_object_or_404(ShoppingItem, id=item_id)
         checked = request.POST.get('checked') == 'true'
         item.checked = checked
         item.save()
         return JsonResponse({'success': True})
     return JsonResponse({'success': False}, status=400)
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+def delete_selected_items(request):
+    if request.method == 'GET':
+        item_ids = request.GET.getlist('item_ids')  # Array von IDs
+
+        if not item_ids:
+            return JsonResponse({'error': 'Keine Artikel ausgewählt.'}, status=400)
+
+        try:
+            ShoppingItem.objects.filter(id__in=item_ids).delete()
+            return JsonResponse({'success': True})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+
+    return JsonResponse({'error': 'Invalid request method.'}, status=400)
+
+def delete_all_items(request):
+    if request.method == 'POST':
+        # Debug: Logge den empfangenen short_link
+        data = json.loads(request.body)
+        short_link = data.get('short_link')
+        logger.debug(f"Received short_link: {short_link}")
+
+        if not short_link:
+            return JsonResponse({'error': 'short_link missing'}, status=400)
+
+        try:
+            shopping_list = ShoppingList.objects.get(short_link=short_link)
+            ShoppingItem.objects.filter(shopping_list=shopping_list).delete()  # Lösche alle Items für diese Liste
+            return JsonResponse({'success': True})
+        except ShoppingList.DoesNotExist:
+            logger.error(f"ShoppingList with short_link '{short_link}' not found.")
+            return JsonResponse({'error': 'ShoppingList not found'}, status=404)
+
+    return JsonResponse({'error': 'Invalid request method.'}, status=400)

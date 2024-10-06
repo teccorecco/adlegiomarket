@@ -1,5 +1,102 @@
 /* ========== General Styles ========== */
 
+/* Container für die Artikel-Einträge */
+.item-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+/* Checkbox und andere Elemente anpassen */
+.checkbox-wrapper-small {
+  margin-right: 10px; /* Weniger Abstand zwischen Checkbox und Item */
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.item-quantity {
+  margin-right: 15px;
+  text-align: center;
+  width: 50px; /* Einheitliche Breite, damit die Mengen ausgerichtet sind */
+}
+
+.item-name {
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-container {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Anpassung für mobile Geräte */
+@media (max-width: 576px) {
+  /* Volle Breite des Containers für Mobilgeräte */
+ 
+
+  /* Buttons auf voller Breite */
+  .button-container {
+      width: 60%; /* Volle Breite */
+      display: flex;
+      justify-content: flex-start; /* Links ausgerichtet */
+  }
+
+  .button-container .btn-danger {
+      width: 48%; /* Buttons teilen sich die Breite */
+      margin-right: 2%; /* Abstand zwischen den Buttons */
+  }
+
+  /* Listenelemente und Checkboxen */
+  .list-group-item {
+    display: flex;
+    justify-content: flex-start; /* Links ausgerichtet */
+    padding-left: 5px; /* Weniger Abstand nach links */
+    padding-right: 5px; /* Weniger Abstand nach rechts */
+    border: none; /* Rand entfernen */
+  }
+
+  .item-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%; /* Volle Breite der Informationen */
+  }
+
+  .checkbox-wrapper-small {
+    width: auto; /* Verhindert, dass die Checkbox zu viel Platz einnimmt */
+    display: flex; /* Stelle sicher, dass der Inhalt inline dargestellt wird */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    margin-right: 10px; /* Abstand zwischen Checkbox und Menge */
+  }  
+
+  .item-quantity {
+      margin-right: 10px; /* Weniger Abstand zur Menge */
+      font-weight: bold; /* Menge fett machen */
+      text-align: left; /* Links ausgerichtet */
+  }
+
+  .item-name {
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  .btn-container {
+      margin-left: auto; /* Positioniere den Button rechts */
+      margin-right: 0;
+  }
+}
+
+
 /* Underline effect for headers */
 .underline:after {
   content: "";
@@ -13,21 +110,7 @@
   z-index: -1;
 }
 
-/* ========== Mobile Navbar Adjustments ========== */
-@media (max-width: 767.98px) {
-  .navbar-collapse {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
 /* ========== Modal Styles ========== */
-/* Smaller modals on mobile */
 .small-modal {
   max-width: 300px;
   margin: auto;
@@ -52,7 +135,6 @@
   font-size: 1.2rem;
 }
 
-/* Centering modals */
 .modal-dialog-centered {
   display: flex;
   align-items: center;
@@ -78,58 +160,102 @@
   color: black;
 }
 
-/* ========== List Item Styles ========== */
 .custom-list-item {
   border: none;
   padding: 10px 0;
 }
 
-/* Adjust item row to have more space between items and checkbox */
+/* ========== Item List Styles ========== */
 .item-row {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensure there's spacing between items */
-  margin-bottom: 15px; /* Space between each list item */
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .item-quantity {
   font-weight: bold;
-  margin-right: 15px; /* Slightly larger space between quantity and name */
+  margin-right: 15px;
+  width: 50px;
+  text-align: center;
 }
 
 .item-name {
-  margin-right: 30px; /* Adds more space between name and delete button */
-  width: auto; /* Prevents the name from being too wide */
-  border: none;
-  border-bottom: 1px solid #ccc; /* Underline style */
+  cursor: pointer;
+  flex-grow: 1;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.item-name:focus {
-  outline: none;
-  border-bottom: 1px solid #E63946; /* Change border color when focused */
+.item-name.strikethrough {
+  color: #d9534f;
+  text-decoration: line-through;
 }
 
-
-.item-input {
-  border: none; /* Remove all borders */
-  width: 100%; /* Make it stretch */
-  padding: 5px 0; /* Add some padding for space */
+/* Menge und Name in einer Gruppe */
+.item-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
-.item-input:focus {
-  border-bottom: 1px solid #E63946; /* Only the bottom border should change on focus */
-  outline: none; /* Remove the outline when focused */
+/* Container für die Artikel-Einträge */
+.item-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
 }
 
+/* ========== List Group Styles ========== */
 .list-group-item {
   border: none;
-  padding-left: 20px; /* Add padding to move items right */
-  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* ========== Button Styles ========== */
 .btn {
   border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.button-container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-container .btn-danger {
+  margin-right: 10px;
+}
+
+.fade-button {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-button.show {
+  opacity: 1;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 50px;
+}
+
+.containerSpecial {
+  width: 70%; 
+  margin: 0 auto;
 }
 
 /* ========== Copy Link Section Styles ========== */
@@ -141,6 +267,7 @@
   padding: 10px 16px;
   pointer-events: none;
   box-shadow: none;
+  text-align: center;
 }
 
 .custom-copy-btn {
@@ -156,30 +283,89 @@
   color: white;
 }
 
+/* Anpassung für mobile Geräte */
+@media (max-width: 576px) {
+  /* Volle Breite des Containers für Mobilgeräte */
+  .containerSpecial {
+      width: 100%; /* Volle Breite */
+      padding: 0 15px; /* Etwas Padding für die Ränder */
+  }
 
-/* ========== Checkbox Styles with Custom Images ========== */
-.item-checkbox {
-  appearance: none;
-  width: 40px;
-  height: 40px;
-  border: none; /* No border needed as we're using images */
-  border-radius: 50%; /* Keep it round */
-  margin-right: 20px;
-  display: inline-block;
-  background-image: url('/static/img/checkboxFalse.png'); /* Default unchecked image */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  transition: background-image 0.3s ease-in-out;
+  /* Buttons auf voller Breite */
+  .button-container {
+      width: 100%; /* Volle Breite */
+      display: flex;
+      justify-content: flex-start; 
+  }
+
+  .button-container .btn {
+      font-size: 12px;
+  }
+
+
+  .button-container .btn-danger {
+      width: 48%; /* Buttons teilen sich die Breite */
+      margin-right: 2%; /* Abstand zwischen den Buttons */
+  }
+
+    /* Container für die Artikel-Einträge */
+  .item-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Damit die Einträge sich über die gesamte Breite strecken */
+    justify-content: flex-start;
+  }
+
+  /* Checkbox und andere Elemente anpassen */
+  .checkbox-wrapper-19,
+  .checkbox-wrapper-small {
+      width: 10%; /* Volle Breite für mobile Darstellung */
+  }
+
+  .item-checkbox {
+      width: 25px; /* Kleinere Checkbox für mobile Darstellung */
+      height: 25px;
+  }
+
+  .custom-link-input {
+      width: 85%; /* Volle Breite des Links für Mobilgeräte */
+  }
+
+  .custom-copy-btn {
+      width: 15%; /* Kleinere Breite für den Button */
+  }
+
+  .item-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .checkbox-wrapper-small {
+      margin-right: 10px; /* Weniger Abstand zwischen Checkbox und Item */
+  }
+
+  .item-quantity {
+      margin-right: 10px; /* Weniger Abstand zur Menge */
+      text-align: left; /* Links ausgerichtet */
+  }
+
+  .item-name {
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  .btn-container {
+      margin-left: auto;
+      margin-right: 0;
+  }
 }
 
-.item-checkbox:checked {
-  background-image: url('/static/img/checkboxTrue.png'); /* Checked image */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
+
 
 /* ========== Mobile Responsive Typography Adjustments ========== */
 @media (min-width: 300px) and (max-width: 500px) {
@@ -227,4 +413,297 @@
 img.fit-cover {
   object-fit: cover; /* Ensure the image fits well */
   max-width: 100%; /* Ensure image scales correctly */
+}
+
+/* Strikethrough animation */
+.strikethrough {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* Custom style for the checkboxes */
+.select-checkbox {
+  margin-right: 15px;
+}
+.purchase-checkbox {
+  margin-left: 15px;
+}
+
+
+
+
+/* Checkbox */
+
+.checkbox-wrapper-19 {
+  box-sizing: border-box;
+  --background-color: #fff;
+  --checkbox-height: 25px;
+}
+@-moz-keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+@-webkit-keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+@keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+@keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+@-webkit-keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+@-moz-keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+.checkbox-wrapper-19 input[type=checkbox] {
+  display: none;
+}
+.checkbox-wrapper-19 .check-box {
+  height: var(--checkbox-height);
+  width: var(--checkbox-height);
+  background-color: transparent;
+  border: calc(var(--checkbox-height) * .1) solid #000;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.2s;
+  -o-transition: border-color ease 0.2s;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+}
+.checkbox-wrapper-19 .check-box::before,
+.checkbox-wrapper-19 .check-box::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: calc(var(--checkbox-height) * .2);
+  background-color: #E63946;
+  display: inline-block;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 5px;
+  content: " ";
+  -webkit-transition: opacity ease 0.5;
+  -moz-transition: opacity ease 0.5;
+  transition: opacity ease 0.5;
+}
+.checkbox-wrapper-19 .check-box::before {
+  top: calc(var(--checkbox-height) * .72);
+  left: calc(var(--checkbox-height) * .41);
+  box-shadow: 0 0 0 calc(var(--checkbox-height) * .05) var(--background-color);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.checkbox-wrapper-19 .check-box::after {
+  top: calc(var(--checkbox-height) * .37);
+  left: calc(var(--checkbox-height) * .05);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box,
+.checkbox-wrapper-19 .check-box.checked {
+  border-color: #E63946;
+}
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::after,
+.checkbox-wrapper-19 .check-box.checked::after {
+  height: calc(var(--checkbox-height) / 2);
+  -moz-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  -o-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  -webkit-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+  animation: dothabottomcheck-19 0.2s ease 0s forwards;
+}
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::before,
+.checkbox-wrapper-19 .check-box.checked::before {
+  height: calc(var(--checkbox-height) * 1.2);
+  -moz-animation: dothatopcheck-19 0.4s ease 0s forwards;
+  -o-animation: dothatopcheck-19 0.4s ease 0s forwards;
+  -webkit-animation: dothatopcheck-19 0.4s ease 0s forwards;
+  animation: dothatopcheck-19 0.4s ease 0s forwards;
+}
+
+/* Anpassung der Checkbox für kleinere Größe und rote Farbe */
+.checkbox-wrapper-small {
+  box-sizing: border-box;
+  --background-color: #fff;
+  --checkbox-height: 15px; /* Kleinere Checkbox */
+}
+
+@-moz-keyframes dothabottomcheck-small {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@-webkit-keyframes dothabottomcheck-small {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@keyframes dothabottomcheck-small {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@keyframes dothatopcheck-small {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+
+@-webkit-keyframes dothatopcheck-small {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+
+@-moz-keyframes dothatopcheck-small {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}
+
+.checkbox-wrapper-small input[type=checkbox] {
+  display: none;
+}
+
+.checkbox-wrapper-small .check-box-small {
+  height: var(--checkbox-height);
+  width: var(--checkbox-height);
+  background-color: transparent;
+  border: calc(var(--checkbox-height) * .1) solid #000;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+}
+
+.checkbox-wrapper-small .check-box-small::before,
+.checkbox-wrapper-small .check-box-small::after {
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: calc(var(--checkbox-height) * .2);
+  background-color: #E63946; /* Rote Häkchenfarbe */
+  display: inline-block;
+  transform-origin: left top;
+  border-radius: 5px;
+  content: " ";
+  transition: opacity ease 0.5;
+}
+
+.checkbox-wrapper-small .check-box-small::before {
+  top: calc(var(--checkbox-height) * .72);
+  left: calc(var(--checkbox-height) * .41);
+  box-shadow: 0 0 0 calc(var(--checkbox-height) * .05) var(--background-color);
+  transform: rotate(-135deg);
+}
+
+.checkbox-wrapper-small .check-box-small::after {
+  top: calc(var(--checkbox-height) * .37);
+  left: calc(var(--checkbox-height) * .05);
+  transform: rotate(-45deg);
+}
+
+.checkbox-wrapper-small input[type=checkbox]:checked + .check-box-small,
+.checkbox-wrapper-small .check-box-small.checked {
+  border-color: #E63946; /* Rahmenfarbe nach dem Anklicken */
+}
+
+.checkbox-wrapper-small input[type=checkbox]:checked + .check-box-small::after,
+.checkbox-wrapper-small .check-box-small.checked::after {
+  height: calc(var(--checkbox-height) / 2);
+  animation: dothabottomcheck-small 0.2s ease 0s forwards;
+}
+
+.checkbox-wrapper-small input[type=checkbox]:checked + .check-box-small::before,
+.checkbox-wrapper-small .check-box-small.checked::before {
+  height: calc(var(--checkbox-height) * 1.2);
+  animation: dothatopcheck-small 0.4s ease 0s forwards;
 }

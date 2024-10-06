@@ -22,17 +22,23 @@
             <div class="col-md-8 mx-auto">
                 <form method="post" class="d-flex">
                     {% csrf_token %}
-                    <input type="text" name="item_name" placeholder="{% trans 'Name' %}" class="form-control me-2" required>
-                    <input type="number" name="quantity" placeholder="{% trans 'Menge' %}" class="form-control me-2" required>
-                    <button type="submit" class="btn btn-primary" style="color: white; border-radius: 8px;">{% trans "Hinzufügen" %}</button>
+                    <input type="text" name="item_name" placeholder="{% trans 'Name' %}" class="form-control me-2" required 
+                           style="border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                    
+                    <input type="number" name="quantity" class="form-control me-2" required 
+                           style="max-width: 80px; color: #000;" value="1" inputmode="numeric" min="1" step="1">
+                    
+                    <button type="submit" class="btn btn-primary" 
+                            style="color: white; border-radius: 8px; font-size: 28px; padding: 5px 15px; line-height: 1; display: flex; justify-content: center; align-items: center;">
+                        +
+                    </button>
                 </form>
             </div>
         </div>
-
+        
         <!-- Random Link Section -->
         <div class="row mb-4">
             <div class="col-md-8 mx-auto d-flex">
-                <!-- Display the shorter link in the input with background and rounded corners -->
                 <input type="text" id="shoppingListLink" class="form-control me-2 custom-link-input" value="adlegio.de/l/{{ short_link }}" readonly>
                 <button class="btn btn-secondary custom-copy-btn" onclick="copyToClipboard()">
                     <i class="bi bi-clipboard"></i>
@@ -40,44 +46,60 @@
             </div>
         </div>
 
-            <!-- Kategorien Accordion -->
-            <div class="row mb-4">
-                <div class="col-md-8 mx-auto">
-                    <div class="accordion text-muted" id="shoppingListAccordion">
-                        {% if items %}
-                            <!-- Iterate through categories and items -->
-                            {% for category, items_in_category in items|group_by_category %}
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" style="color: black;">
-                                        <button class="accordion-button" type="button" style="color: black;">
-                                            {{ category }}
+        <!-- Buttons oben für "Ausgewählte löschen" und "Alle löschen" -->
+        <div class="button-container">
+            {% if items|length > 0 %}
+                <button class="btn btn-danger" id="deleteAllButton" onclick="deleteAllItems()">
+                    {% trans "Alle löschen" %}
+                </button>
+            {% endif %}
+            <button class="btn btn-danger" id="deleteSelectedButton" style="display: none;" onclick="showDeleteModal()">
+                {% trans "Ausgewählte löschen" %}
+            </button>                        
+        </div>      
+
+        <section class="py-3">
+            <div class="containerSpecial">
+                <div class="accordion" id="shoppingListAccordion">
+                    {% for category, items_in_category in items|group_by_category %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header d-flex align-items-center">
+                            <!-- Kategorie Checkbox -->
+                            <div class="checkbox-wrapper-19">
+                                <input type="checkbox" id="cbtest-{{ category }}" onclick="toggleCategorySelection('{{ category }}')"/>
+                                <label for="cbtest-{{ category }}" class="check-box"></label>
+                            </div>                            
+                            <button class="accordion-button">
+                                {{ category }}
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse show">
+                            <ul class="list-group">
+                                {% for item in items_in_category %}
+                                <li class="list-group-item">
+                                    <div class="checkbox-wrapper-small">
+                                        <input type="checkbox" id="cbitem-{{ item.id }}" data-id="{{ item.id }}" data-category="{{ category }}" class="select-checkbox" onchange="toggleDeleteSelectedButton()"/>
+                                        <label for="cbitem-{{ item.id }}" class="check-box-small"></label>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="item-quantity">{{ item.quantity }}</span>
+                                        <span class="item-name">{{ item.name }}</span>
+                                    </div>
+                                    <div class="btn-container">
+                                        <button class="btn btn-danger btn-sm" onclick="deleteItem({{ item.id }})">
+                                            <i class="bi bi-trash"></i>
                                         </button>
-                                    </h2>
-                                    <div class="accordion-collapse collapse show">
-                                        <ul class="list-group">
-                                            {% for item in items_in_category %}
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                <input type="checkbox" class="item-checkbox" data-id="{{ item.id }}" {% if item.checked %}checked{% endif %}>
-                                                <span class="item-quantity">{{ item.quantity }}</span>
-                                                <input type="text" class="item-name" value="{{ item.name }}" readonly>
-                                                <button class="btn btn-danger btn-sm" onclick="deleteItem({{ item.id }})">
-                                                    <i class="bi bi-trash"></i>
-                                                </button>
-                                            </li>
-                                            {% endfor %}
-                                        </ul>                                        
-                                    </div>                                      
-                                </div>
-                            {% endfor %}
-                        {% else %}
-                            <p>{% trans "Keine Artikel in der Einkaufsliste." %}</p>
-                        {% endif %}
-                    </div>                    
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>                                                                                
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
 </section>
+        
 
 <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -89,6 +111,19 @@
           <button type="button" class="btn btn-danger" style="border-radius: 8px;" id="confirmDeleteButton">{% trans "Löschen" %}</button>
         </div>
       </div>
+    </div>
+</div>
+
+<!-- Modal für die Bestätigung des Löschens -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4" style="border-radius: 8px;">
+            <div class="modal-body text-center">
+                <p class="fs-5 mb-4" id="deleteModalLabel">{% trans "Möchten Sie wirklich die ausgewählten Artikel löschen?" %}</p>
+                <button type="button" class="btn btn-secondary me-2" style="border-radius: 8px;" data-bs-dismiss="modal">{% trans "Abbrechen" %}</button>
+                <button type="button" class="btn btn-danger" style="border-radius: 8px;" id="confirmDeleteButton" onclick="deleteSelectedItems()">{% trans "Löschen" %}</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -106,5 +141,9 @@
 
 <!-- JavaScript einbinden -->
 <script src="{% static 'js/einkaufsliste.js' %}"></script>
+<script>
+    const short_link = "{{ short_link }}";  // Prüfe hier, ob der richtige Wert erscheint
+    console.log("short_link: ", short_link);  // Füge dieses Debugging hinzu, um sicherzustellen, dass der short_link korrekt im Frontend verfügbar ist.
+</script>
 
 {% endblock content %}

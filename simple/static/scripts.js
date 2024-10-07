@@ -7,6 +7,8 @@ function addItem(e) {
   const listItem = document.createElement('li');
   listItem.innerText = name;
 
+  var all = document.getElementById('selectAll');
+  all.addEventListener("click", select());
 
   var itemCheck = document.createElement("INPUT");
   itemCheck.setAttribute("type", "checkbox");
@@ -30,6 +32,12 @@ function deleteItem(e) {
   listItem.remove();
 }
 
-//  funktion selectAll(e) {
+function select(e){
+  var list = document.getElementById('item-list');
+  var checkbox = list.querySelectorAll('input[type="checkbox"]');
 
-// }
+  checkbox.forEach(select(e, )
+
+  }
+})
+

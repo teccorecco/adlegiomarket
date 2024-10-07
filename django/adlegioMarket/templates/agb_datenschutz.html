@@ -1,15 +1,72 @@
-{% extends 'base.html' %}
-{% load static i18n %}
-
+{% extends "base.html" %}
+{% load i18n %}
 {% block content %}
-<section class="py-5 mt-5">
-    <div class="container py-4 py-xl-5">
-        <div class="row mb-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2 class="display-6 fw-bold mb-4">Hier AGB &amp; Datenschutz</h2>
-                <p class="text-muted">Hier werden die Funktionen für die Einkaufsliste sein</p>
+    <section class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="display-6 fw-bold mb-4">&nbsp;<span class="underline">{% trans "AGB & Datenschutzhinweise" %}</span></h2>
+                    <p class="text-muted">{% trans "Nachfolgend finden Sie die allgemeinen Geschäftsbedingungen und die Datenschutzhinweise zu diesem studentischen Projekt." %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <!-- Abschnitt: Allgemeine Geschäftsbedingungen -->
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "Allgemeine Geschäftsbedingungen (AGB)" %}</h4>
+                    
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "1. Zweck dieser Website" %}</h4>
+                    <p>
+                        {% trans "Diese Website ist ein studentisches Projekt, das im Rahmen einer Unterrichtseinheit erstellt wurde. Es verfolgt keine kommerziellen Ziele und dient lediglich der Veranschaulichung von Konzepten aus dem Unterricht." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "2. Nutzung der Inhalte" %}</h4>
+                    <p>
+                        {% trans "Die auf dieser Website bereitgestellten Inhalte sind ausschließlich für Bildungszwecke vorgesehen. Eine kommerzielle Nutzung ist nicht gestattet." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "3. Haftungsausschluss" %}</h4>
+                    <p>
+                        {% trans "Wir übernehmen keine Gewähr für die Vollständigkeit oder Richtigkeit der auf dieser Website bereitgestellten Inhalte. Da es sich um ein studentisches Projekt handelt, kann es zu Fehlern oder Ungenauigkeiten kommen." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "4. Änderungen der AGB" %}</h4>
+                    <p>
+                        {% trans "Da es sich um ein studentisches Projekt handelt, können die Inhalte und Bedingungen dieser Website ohne Vorankündigung geändert werden." %}
+                    </p>
+
+                    <hr>
+
+                    <!-- Abschnitt: Datenschutzhinweise -->
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "Datenschutzhinweise" %}</h4>
+                    
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "1. Zweck der Datenerhebung" %}</h4>
+                    <p>
+                        {% trans "Die Erhebung und Verarbeitung personenbezogener Daten erfolgt ausschließlich im Rahmen dieses studentischen Projekts. Personenbezogene Daten werden nur im erforderlichen Umfang verarbeitet." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "2. Erhobene Daten" %}</h4>
+                    <p>
+                        {% trans "Beim Besuch dieser Website werden automatisch Informationen wie die IP-Adresse, der Browsertyp und das Betriebssystem erfasst. Diese Daten werden ausschließlich zur Verbesserung der Benutzererfahrung verwendet und nicht an Dritte weitergegeben." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "3. Cookies" %}</h4>
+                    <p>
+                        {% trans "Diese Website verwendet notwendige Cookies, um die grundlegenden Funktionen der Website zu gewährleisten. Darüber hinaus werden keine zusätzlichen Cookies für Tracking oder Marketing-Zwecke verwendet." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "4. Rechte der Nutzer" %}</h4>
+                    <p>
+                        {% trans "Da es sich um ein schulisches Projekt handelt, ist die Verarbeitung personenbezogener Daten auf ein Minimum beschränkt. Nutzer haben das Recht, Auskunft über die gespeicherten Daten zu erhalten oder deren Löschung zu verlangen." %}
+                    </p>
+
+                    <h4 class="fw-bold mt-4 mb-2">{% trans "5. Kontakt" %}</h4>
+                    <p>
+                        {% trans "Bei Fragen zum Datenschutz oder zur Verarbeitung Ihrer Daten wenden Sie sich bitte an: Iliya Borisov, E-Mail: info@adlegio.de" %}
+                    </p>
+
+                    <p class="mt-5">{% trans "Homburg, 07.10.2024" %}</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 {% endblock content %}

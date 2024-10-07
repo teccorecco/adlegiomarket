@@ -1,6 +1,7 @@
+/* Grundlegendes Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,71 +12,156 @@ body {
 .container {
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
     text-align: center;
+    margin: 0 20px;
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
 }
 
+/* Flexbox-Styling für  Input-Section */
 .input-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
     margin-bottom: 20px;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px; 
 }
 
-input {
-    flex: 1;
-    padding: 5px;
-    font-size: 16px;
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 6px 12px;
-    font-size: 16px;
-    background-color: #007bff;
+    padding: 12px 20px;
+    font-size: 14px;
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px; 
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
     align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+li .item-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+li .item-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+li .quantity {
+    margin-left: 10px;
+    font-weight: normal;
+    color: grey;
 }
 
 li button {
     background-color: transparent;
     border: none;
-    font-size: 16px;
+    font-size: 12px; 
     cursor: pointer;
     color: red;
+    padding: 3px 5px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    align-self: last baseline;
 }
 
 li button:hover {
     color: darkred;
+    background-color: transparent;
 }
 
-li.completed {
-    text-decoration: line-through;
+/* Responsivität bleibt erhalten */
+@media (min-width: 500px) {
+    .input-section {
+        flex-direction: column;
+    }
+}
+}
+
+li .item-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 10px; /* Abstand zum Löschen-Button */
+}
+
+li .item-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+li .quantity {
+    margin-left: 10px;
+    font-weight: normal;
     color: grey;
+}
+
+li button {
+    background-color: transparent;
+    border: none;
+    font-size: 12px; 
+    cursor: pointer;
+    color: red;
+    padding: 3px 5px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    align-self: last baseline;
+}
+
+li button:hover {
+    color: darkred;
+    background-color: transparent;
+}
+
+/* Responsivität bleibt erhalten */
+@media (min-width: 500px) {
+    .input-section {
+        flex-direction: column;
+    }
 }

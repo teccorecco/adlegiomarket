@@ -5,7 +5,6 @@ from datetime import timedelta
 class ShoppingList(models.Model):
     short_link = models.CharField(max_length=8, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    name = models.CharField(max_length=255, blank=True, null=True)  # New field
 
     def __str__(self):
         return self.name or f"Shopping List ({self.short_link})"

@@ -3,6 +3,10 @@
 {% load custom_filters %}
 {% block content %}
 
+{% if error_message %}
+  <div class="alert alert-danger">{{ error_message }}</div>
+{% endif %}
+
 <section class="py-3 mt-5">
     <div class="container py-4 py-xl-5">
         <div class="row mb-3">
@@ -49,13 +53,22 @@
         <!-- Buttons oben für "Ausgewählte löschen" und "Alle löschen" -->
         <div class="button-container">
             {% if items|length > 0 %}
-                <button class="btn btn-danger" id="deleteAllButton" onclick="deleteAllItems()">
+            <form id="deleteAllForm" method="POST" action="{% url 'delete_all_items' %}">
+                {% csrf_token %}
+                <input type="hidden" name="short_link" value="{{ short_link }}">
+                <button type="submit" class="btn btn-danger" id="deleteAllButton">
                     {% trans "Alle löschen" %}
                 </button>
+            </form>
+                
             {% endif %}
-            <button class="btn btn-danger" id="deleteSelectedButton" style="display: none;" onclick="showDeleteModal()">
-                {% trans "Ausgewählte löschen" %}
-            </button>                        
+            <form id="deleteSelectedForm" method="POST" action="{% url 'delete_selected_items' %}">
+                {% csrf_token %}
+                <input type="hidden" name="item_ids" id="selectedItemsInput">
+                <button type="submit" class="btn btn-danger" id="deleteSelectedButton" style="display: none;">
+                    {% trans "Ausgewählte löschen" %}
+                </button>
+            </form>
         </div>      
 
         <section class="py-3">
@@ -119,13 +132,14 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content p-4" style="border-radius: 8px;">
             <div class="modal-body text-center">
-                <p class="fs-5 mb-4" id="deleteModalLabel">{% trans "Möchten Sie wirklich die ausgewählten Artikel löschen?" %}</p>
+                <p class="fs-5 mb-4" id="deleteModalLabel">{% trans "Möchten Sie wirklich alle Artikel löschen?" %}</p>
                 <button type="button" class="btn btn-secondary me-2" style="border-radius: 8px;" data-bs-dismiss="modal">{% trans "Abbrechen" %}</button>
-                <button type="button" class="btn btn-danger" style="border-radius: 8px;" id="confirmDeleteButton" onclick="deleteSelectedItems()">{% trans "Löschen" %}</button>
+                <button type="button" class="btn btn-danger" style="border-radius: 8px;" id="confirmDeleteAllButton">{% trans "Löschen" %}</button>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Modal für "Link kopiert" -->
 <div class="modal fade" id="linkCopiedModal" tabindex="-1" aria-labelledby="linkCopiedLabel" aria-hidden="true">
@@ -143,7 +157,29 @@
 <script src="{% static 'js/einkaufsliste.js' %}"></script>
 <script>
     const short_link = "{{ short_link }}";  // Prüfe hier, ob der richtige Wert erscheint
-    console.log("short_link: ", short_link);  // Füge dieses Debugging hinzu, um sicherzustellen, dass der short_link korrekt im Frontend verfügbar ist.
+    console.log("short_link: ", short_link);  
+    document.addEventListener('DOMContentLoaded', function () {
+        // Event Listener für den "Alle löschen" Button
+        document.getElementById('deleteAllButton').addEventListener('click', function (event) {
+            event.preventDefault(); // Verhindert das Standardverhalten des Buttons (direktes Absenden)
+    
+            console.log("Delete All Button clicked"); // Debugging-Ausgabe
+    
+            // Zeige das Modal zur Bestätigung an
+            var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+            deleteModal.show();
+    
+            // Event Listener für den Bestätigungsbutton im Modal
+            document.getElementById('confirmDeleteAllButton').addEventListener('click', function () {
+                console.log("Confirm Delete All Button clicked"); // Debugging-Ausgabe
+                
+                // Sende das Formular nach der Bestätigung
+                document.getElementById('deleteAllForm').submit();
+            }, { once: true }); // Wichtig: { once: true } stellt sicher, dass der Event Listener nur einmal aufgerufen wird
+        });
+    });
+    
 </script>
+
 
 {% endblock content %}

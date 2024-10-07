@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>AdLegio Market</title>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/Raleway.css' %}">
     <link rel="stylesheet" href="{% static 'css/bs-theme-overrides.css' %}">
@@ -17,6 +16,8 @@
     <link rel="stylesheet" href="{% static 'css/Team-images.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/cookieconsent.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
 </head>
 
 <body>
@@ -117,8 +118,6 @@
             </div>
         </div>
     </nav>
-    
-    
 
     {% block content %}
     {% endblock content %}
@@ -151,7 +150,8 @@
                     <ul class="list-unstyled">
                         <li><a href="{% url 'impressum' %}">{% trans "Impressum" %}</a></li>
                         <li><a href="{% url 'agb_datenschutz' %}">{% trans "AGB & Datenschutz" %}</a></li>
-                        <li><a href="#">{% trans "Cookies" %}</a></li>
+                        <li><a href="#" id="cookie-settings">{% trans "Cookies" %}</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -176,6 +176,13 @@
     <script src="{% static 'js/aos.min.js' %}"></script>
     <script src="{% static 'js/bs-init.js' %}"></script>
     <script src="{% static 'js/startup-modern.js' %}"></script>
+    <script type="module" src="{% static 'js/cookieconsent-config.js' %}"></script>
+    <script>
+        document.getElementById('cookie-settings').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            CookieConsent.showPreferences();  
+        });
+    </script>    
 </body>
 
 </html>

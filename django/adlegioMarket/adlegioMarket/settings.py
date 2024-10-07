@@ -8,9 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'rfpkkc*!p1aaq)(1(xuhcvi=i1dzxuze4x_*fm%vrp!&cgvoqv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['adlegio.de', 'www.adlegio.de']
+ALLOWED_HOSTS = ['127.0.0.1', 'adlegio.de', 'www.adlegio.de']
 
 # Application definition
 
@@ -108,6 +108,22 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',  
+#         },
+#     },
+# }
 
 # Media files
 MEDIA_URL = '/media/'

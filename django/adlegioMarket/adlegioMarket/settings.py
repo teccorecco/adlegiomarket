@@ -8,9 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'rfpkkc*!p1aaq)(1(xuhcvi=i1dzxuze4x_*fm%vrp!&cgvoqv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['adlegio.de', 'www.adlegio.de']
+ALLOWED_HOSTS = ['127.0.0.1', 'adlegio.de', 'www.adlegio.de']
 
 # Application definition
 

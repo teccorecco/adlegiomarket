@@ -1,0 +1,2 @@
+Um die "Django"-Anwendung auszuführen benötigt man zuvor auf dem Rechner Python.
+Am besten lädt man sich die aktuellste Python im Microsoft Store oder auf einer offiziellen Website herunter.
